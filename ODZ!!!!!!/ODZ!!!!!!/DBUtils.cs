@@ -4,6 +4,10 @@ namespace ODZ______
 {
     class DBUtils
     {
+        /// <summary>
+        /// Method of setting conection parameters
+        /// </summary>
+        /// <returns>MySQLConection</returns>
         public static MySqlConnection GetDBConnection()
         {
             string host = "37.46.247.230";

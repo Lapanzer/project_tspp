@@ -28,90 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.changeData = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addBut = new System.Windows.Forms.Button();
+            this.addSurnameTxt = new System.Windows.Forms.TextBox();
+            this.addSchoolNumTxt = new System.Windows.Forms.TextBox();
+            this.addMarkTxt = new System.Windows.Forms.TextBox();
+            this.addNameTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comeBackBut = new System.Windows.Forms.Button();
+            this.chBut = new System.Windows.Forms.Button();
+            this.cB1 = new System.Windows.Forms.ComboBox();
+            this.sampleAbitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chSurnameTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.chSchoolNumTxt = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
-            this.AId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASchoolNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chMarkTxt = new System.Windows.Forms.TextBox();
+            this.chNameTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.подключитьКБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.создатьНовоеПодключениеКБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.changeData);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.addBut);
+            this.groupBox1.Controls.Add(this.addSurnameTxt);
+            this.groupBox1.Controls.Add(this.addSchoolNumTxt);
+            this.groupBox1.Controls.Add(this.addMarkTxt);
+            this.groupBox1.Controls.Add(this.addNameTxt);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 3);
+            this.groupBox1.Location = new System.Drawing.Point(8, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(523, 114);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Додати абітурієнта";
             // 
-            // changeData
+            // addBut
             // 
-            this.changeData.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeData.Location = new System.Drawing.Point(218, 79);
-            this.changeData.Name = "changeData";
-            this.changeData.Size = new System.Drawing.Size(89, 30);
-            this.changeData.TabIndex = 2;
-            this.changeData.Text = "Додати\r\n";
-            this.changeData.UseVisualStyleBackColor = true;
+            this.addBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBut.Location = new System.Drawing.Point(218, 79);
+            this.addBut.Name = "addBut";
+            this.addBut.Size = new System.Drawing.Size(89, 30);
+            this.addBut.TabIndex = 2;
+            this.addBut.Text = "Додати\r\n";
+            this.addBut.UseVisualStyleBackColor = true;
+            this.addBut.Click += new System.EventHandler(this.addBut_Click);
             // 
-            // textBox2
+            // addSurnameTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(6, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 24);
-            this.textBox2.TabIndex = 1;
+            this.addSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addSurnameTxt.Location = new System.Drawing.Point(6, 49);
+            this.addSurnameTxt.MaxLength = 20;
+            this.addSurnameTxt.Name = "addSurnameTxt";
+            this.addSurnameTxt.Size = new System.Drawing.Size(123, 24);
+            this.addSurnameTxt.TabIndex = 1;
             // 
-            // textBox4
+            // addSchoolNumTxt
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(405, 49);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(112, 24);
-            this.textBox4.TabIndex = 1;
+            this.addSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addSchoolNumTxt.Location = new System.Drawing.Point(405, 49);
+            this.addSchoolNumTxt.MaxLength = 20;
+            this.addSchoolNumTxt.Name = "addSchoolNumTxt";
+            this.addSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
+            this.addSchoolNumTxt.TabIndex = 1;
             // 
-            // textBox3
+            // addMarkTxt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(273, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(112, 24);
-            this.textBox3.TabIndex = 1;
+            this.addMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addMarkTxt.Location = new System.Drawing.Point(273, 49);
+            this.addMarkTxt.MaxLength = 20;
+            this.addMarkTxt.Name = "addMarkTxt";
+            this.addMarkTxt.Size = new System.Drawing.Size(112, 24);
+            this.addMarkTxt.TabIndex = 1;
             // 
-            // textBox1
+            // addNameTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(146, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 24);
-            this.textBox1.TabIndex = 1;
+            this.addNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addNameTxt.Location = new System.Drawing.Point(146, 49);
+            this.addNameTxt.MaxLength = 20;
+            this.addNameTxt.Name = "addNameTxt";
+            this.addNameTxt.Size = new System.Drawing.Size(108, 24);
+            this.addNameTxt.TabIndex = 1;
             // 
             // label4
             // 
@@ -151,44 +173,103 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comeBackBut);
+            this.groupBox2.Controls.Add(this.chBut);
+            this.groupBox2.Controls.Add(this.cB1);
+            this.groupBox2.Controls.Add(this.chSurnameTxt);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.chSchoolNumTxt);
             this.groupBox2.Controls.Add(this.dGV1);
+            this.groupBox2.Controls.Add(this.chMarkTxt);
+            this.groupBox2.Controls.Add(this.chNameTxt);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 121);
+            this.groupBox2.Location = new System.Drawing.Point(8, 142);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 254);
+            this.groupBox2.Size = new System.Drawing.Size(523, 320);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Змінити дані абітурієнта";
             // 
-            // comboBox1
+            // comeBackBut
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(72, 24);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.ValueMember = "Id";
+            this.comeBackBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comeBackBut.Location = new System.Drawing.Point(10, 286);
+            this.comeBackBut.Name = "comeBackBut";
+            this.comeBackBut.Size = new System.Drawing.Size(86, 30);
+            this.comeBackBut.TabIndex = 2;
+            this.comeBackBut.Text = "Повернутися";
+            this.comeBackBut.UseVisualStyleBackColor = true;
+            this.comeBackBut.Click += new System.EventHandler(this.comeBackBut_Click);
+            // 
+            // chBut
+            // 
+            this.chBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chBut.Location = new System.Drawing.Point(218, 286);
+            this.chBut.Name = "chBut";
+            this.chBut.Size = new System.Drawing.Size(89, 30);
+            this.chBut.TabIndex = 2;
+            this.chBut.Text = "Змінити\r\n";
+            this.chBut.UseVisualStyleBackColor = true;
+            this.chBut.Click += new System.EventHandler(this.chBut_Click);
+            // 
+            // cB1
+            // 
+            this.cB1.DataSource = this.sampleAbitBindingSource;
+            this.cB1.DisplayMember = "Id";
+            this.cB1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cB1.FormattingEnabled = true;
+            this.cB1.Location = new System.Drawing.Point(233, 189);
+            this.cB1.Name = "cB1";
+            this.cB1.Size = new System.Drawing.Size(72, 24);
+            this.cB1.TabIndex = 2;
+            this.cB1.ValueMember = "Id";
+            // 
+            // sampleAbitBindingSource
+            // 
+            this.sampleAbitBindingSource.DataSource = typeof(ODZ______.SampleAbit);
+            // 
+            // chSurnameTxt
+            // 
+            this.chSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chSurnameTxt.Location = new System.Drawing.Point(6, 249);
+            this.chSurnameTxt.MaxLength = 20;
+            this.chSurnameTxt.Name = "chSurnameTxt";
+            this.chSurnameTxt.Size = new System.Drawing.Size(123, 24);
+            this.chSurnameTxt.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 178);
+            this.label5.Location = new System.Drawing.Point(16, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.Size = new System.Drawing.Size(211, 16);
             this.label5.TabIndex = 1;
-            this.label5.Text = "label5";
+            this.label5.Text = "Оберіть ID абітурієнта для змін";
+            // 
+            // chSchoolNumTxt
+            // 
+            this.chSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chSchoolNumTxt.Location = new System.Drawing.Point(405, 249);
+            this.chSchoolNumTxt.MaxLength = 20;
+            this.chSchoolNumTxt.Name = "chSchoolNumTxt";
+            this.chSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
+            this.chSchoolNumTxt.TabIndex = 1;
             // 
             // dGV1
             // 
+            this.dGV1.AutoGenerateColumns = false;
             this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AId,
-            this.ASurname,
-            this.AName,
-            this.AMark,
-            this.ASchoolNum});
+            this.idDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.markDataGridViewTextBoxColumn,
+            this.numberOfSchoolDataGridViewTextBoxColumn});
+            this.dGV1.DataSource = this.sampleAbitBindingSource;
             this.dGV1.Location = new System.Drawing.Point(10, 21);
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
@@ -196,50 +277,138 @@
             this.dGV1.Size = new System.Drawing.Size(507, 150);
             this.dGV1.TabIndex = 0;
             // 
-            // AId
+            // idDataGridViewTextBoxColumn
             // 
-            this.AId.Frozen = true;
-            this.AId.HeaderText = "ID";
-            this.AId.Name = "AId";
-            this.AId.ReadOnly = true;
-            this.AId.Width = 80;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.idDataGridViewTextBoxColumn.Width = 80;
             // 
-            // ASurname
+            // surnameDataGridViewTextBoxColumn
             // 
-            this.ASurname.Frozen = true;
-            this.ASurname.HeaderText = "Прізвище";
-            this.ASurname.Name = "ASurname";
-            this.ASurname.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // AName
+            // nameDataGridViewTextBoxColumn
             // 
-            this.AName.Frozen = true;
-            this.AName.HeaderText = "Ім\'я";
-            this.AName.Name = "AName";
-            this.AName.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // AMark
+            // markDataGridViewTextBoxColumn
             // 
-            this.AMark.Frozen = true;
-            this.AMark.HeaderText = "Бал";
-            this.AMark.Name = "AMark";
-            this.AMark.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // ASchoolNum
+            // numberOfSchoolDataGridViewTextBoxColumn
             // 
-            this.ASchoolNum.Frozen = true;
-            this.ASchoolNum.HeaderText = "Номер школи";
-            this.ASchoolNum.Name = "ASchoolNum";
-            this.ASchoolNum.ReadOnly = true;
+            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
+            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "Номер школи";
+            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
+            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // chMarkTxt
+            // 
+            this.chMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chMarkTxt.Location = new System.Drawing.Point(273, 249);
+            this.chMarkTxt.MaxLength = 20;
+            this.chMarkTxt.Name = "chMarkTxt";
+            this.chMarkTxt.Size = new System.Drawing.Size(112, 24);
+            this.chMarkTxt.TabIndex = 1;
+            // 
+            // chNameTxt
+            // 
+            this.chNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chNameTxt.Location = new System.Drawing.Point(146, 249);
+            this.chNameTxt.MaxLength = 20;
+            this.chNameTxt.Name = "chNameTxt";
+            this.chNameTxt.Size = new System.Drawing.Size(108, 24);
+            this.chNameTxt.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Прізвище";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(405, 223);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Номер школи";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(143, 223);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ім\'я";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(270, 223);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Оцінки за іспити";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.подключитьКБДToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(539, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // подключитьКБДToolStripMenuItem
+            // 
+            this.подключитьКБДToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьНовоеПодключениеКБДToolStripMenuItem});
+            this.подключитьКБДToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.подключитьКБДToolStripMenuItem.Name = "подключитьКБДToolStripMenuItem";
+            this.подключитьКБДToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.подключитьКБДToolStripMenuItem.Text = "Подключить к БД";
+            // 
+            // создатьНовоеПодключениеКБДToolStripMenuItem
+            // 
+            this.создатьНовоеПодключениеКБДToolStripMenuItem.Name = "создатьНовоеПодключениеКБДToolStripMenuItem";
+            this.создатьНовоеПодключениеКБДToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.создатьНовоеПодключениеКБДToolStripMenuItem.Text = "Создать новое подключение к БД";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 387);
+            this.ClientSize = new System.Drawing.Size(539, 467);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = " Керування даними";
@@ -247,32 +416,49 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox addSurnameTxt;
+        private System.Windows.Forms.TextBox addSchoolNumTxt;
+        private System.Windows.Forms.TextBox addMarkTxt;
+        private System.Windows.Forms.TextBox addNameTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button changeData;
+        private System.Windows.Forms.Button addBut;
         private System.Windows.Forms.DataGridView dGV1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cB1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ASurname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AMark;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ASchoolNum;
-
+        private System.Windows.Forms.Button chBut;
+        private System.Windows.Forms.TextBox chSurnameTxt;
+        private System.Windows.Forms.TextBox chSchoolNumTxt;
+        private System.Windows.Forms.TextBox chMarkTxt;
+        private System.Windows.Forms.TextBox chNameTxt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem подключитьКБДToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem создатьНовоеПодключениеКБДToolStripMenuItem;
+        private System.Windows.Forms.BindingSource sampleAbitBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfSchoolDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button comeBackBut;
     }
 }

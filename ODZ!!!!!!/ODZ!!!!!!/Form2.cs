@@ -6,44 +6,65 @@ namespace ODZ______
 {
     public partial class Form2 : Form
     {
+        private List<SampleAbit> sa = new List<SampleAbit>();
+        private MySqlConnection conn;
+
         public Form2()
         {
             InitializeComponent();
-
-            List<SampleAbit> sa = new List<SampleAbit>();
-            string commandString = "SELECT * FROM abits;";
             dGV1.AllowUserToAddRows = false;
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            MySqlCommand command = new MySqlCommand();
-            MySqlDataReader reader;
-            command.CommandText = commandString;
-            command.Connection = conn;
-            command.Connection.Open();
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                sa.Add(new SampleAbit(int.Parse(reader["id"].ToString()), 
-                                      reader["surname"].ToString(), 
-                                      reader["name"].ToString(), 
-                                      float.Parse(reader["mark"].ToString()), 
-                                      reader["schoolNumber"].ToString()));
-                
-            }
-            reader.Close();
-            PutRows(sa);
+            DBConnect();
         }
 
-        private void PutRows(List<SampleAbit> sa)
+        /// <summary>
+        /// Method of conection to MySQL Server
+        /// </summary>
+        private void DBConnect()
         {
-            foreach (SampleAbit sas in sa)
+            conn = DBUtils.GetDBConnection();
+            MySqlDataReader reader;
+            reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
+            while (reader.Read())
             {
-                dGV1.Rows.Add();
-                dGV1["AId", dGV1.Rows.Count - 1].Value = sas.Id;
-                dGV1["ASurname", dGV1.Rows.Count - 1].Value = sas.Surname;
-                dGV1["AName", dGV1.Rows.Count - 1].Value = sas.Name;
-                dGV1["AMark", dGV1.Rows.Count - 1].Value = sas.Mark;
-                dGV1["ASchoolNum", dGV1.Rows.Count - 1].Value = sas.NumberOfSchool;
+                sampleAbitBindingSource.Add(new SampleAbit(int.Parse(reader["id"].ToString()),
+                                      reader["surname"].ToString(),
+                                      reader["name"].ToString(),
+                                      float.Parse(reader["mark"].ToString()),
+                                      reader["schoolNumber"].ToString()));
             }
+            reader.Close();
+        }
+
+        /// <summary>
+        /// Method to adding new abitudient
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event arguments</param>
+        private void addBut_Click(object sender, System.EventArgs e)
+        {
+            string surname = addSurnameTxt.Text;
+            string name = addNameTxt.Text;
+            //..
+        }
+
+        /// <summary>
+        /// Method to change the abiturient
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event arguments</param>
+        private void chBut_Click(object sender, System.EventArgs e)
+        {
+            //..
+        }
+
+        /// <summary>
+        /// Method to come back to main form
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event arguments</param>
+        private void comeBackBut_Click(object sender, System.EventArgs e)
+        {
+            //..
         }
     }
 }
