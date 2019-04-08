@@ -1,0 +1,12 @@
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.exe
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.pdb
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Form1.resources
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Properties.Resources.resources
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.GenerateResource.Cache
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.exe
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.pdb
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Form2.resources
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.dll
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csprojAssemblyReference.cache
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CoreCompileInputs.cache
+E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CopyComplete
