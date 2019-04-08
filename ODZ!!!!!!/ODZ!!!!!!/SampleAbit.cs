@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ODZ______
 {
-    class SampleRow
+    class SampleAbit
     {
         public static string[] columns = new string[]{
             "ID",
@@ -22,8 +22,8 @@ namespace ODZ______
         public double Mark { get; set; }
         public string NumberOfSchool { get; set; }
 
-        public SampleRow() {}
-        public SampleRow(int id, string surname, string name, double mark, string numberOfSchool)
+        public SampleAbit() {}
+        public SampleAbit(int id, string surname, string name, double mark, string numberOfSchool)
         {
             this.Id = id;
             this.Surname = surname;

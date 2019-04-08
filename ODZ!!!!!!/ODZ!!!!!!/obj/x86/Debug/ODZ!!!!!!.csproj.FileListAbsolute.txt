@@ -10,3 +10,16 @@ E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.dll
 E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csprojAssemblyReference.cache
 E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CoreCompileInputs.cache
 E:\ТСПП\Модель ПЗ\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CopyComplete
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Form1.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Form2.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Properties.Resources.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.GenerateResource.Cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.xml
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csprojAssemblyReference.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CoreCompileInputs.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CopyComplete

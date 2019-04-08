@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.changeData = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,8 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.sampleRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sampleRowBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.dGV1 = new System.Windows.Forms.DataGridView();
             this.AId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +47,9 @@
             this.AName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ASchoolNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sampleRowBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -176,23 +164,12 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sampleRowBindingSource, "Id", true));
-            this.comboBox1.DataSource = this.sampleRowBindingSource;
-            this.comboBox1.DisplayMember = "Id";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(101, 178);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(72, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "Id";
-            // 
-            // sampleRowBindingSource
-            // 
-            this.sampleRowBindingSource.DataSource = typeof(ODZ______.SampleRow);
-            // 
-            // sampleRowBindingSource1
-            // 
-            this.sampleRowBindingSource1.DataSource = typeof(ODZ______.SampleRow);
             // 
             // label5
             // 
@@ -205,20 +182,13 @@
             // 
             // dGV1
             // 
-            this.dGV1.AutoGenerateColumns = false;
             this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AId,
             this.ASurname,
             this.AName,
             this.AMark,
-            this.ASchoolNum,
-            this.idDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.markDataGridViewTextBoxColumn,
-            this.numberOfSchoolDataGridViewTextBoxColumn});
-            this.dGV1.DataSource = this.sampleRowBindingSource;
+            this.ASchoolNum});
             this.dGV1.Location = new System.Drawing.Point(10, 21);
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
@@ -262,45 +232,6 @@
             this.ASchoolNum.Name = "ASchoolNum";
             this.ASchoolNum.ReadOnly = true;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // markDataGridViewTextBoxColumn
-            // 
-            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
-            this.markDataGridViewTextBoxColumn.HeaderText = "Mark";
-            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
-            this.markDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numberOfSchoolDataGridViewTextBoxColumn
-            // 
-            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
-            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "NumberOfSchool";
-            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
-            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sampleRowBindingSource2
-            // 
-            this.sampleRowBindingSource2.DataSource = typeof(ODZ______.SampleRow);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,10 +247,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleRowBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,21 +266,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button changeData;
         private System.Windows.Forms.DataGridView dGV1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn AId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ASurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn AName;
         private System.Windows.Forms.DataGridViewTextBoxColumn AMark;
         private System.Windows.Forms.DataGridViewTextBoxColumn ASchoolNum;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.BindingSource sampleRowBindingSource;
-        private System.Windows.Forms.BindingSource sampleRowBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfSchoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource sampleRowBindingSource2;
 
     }
 }

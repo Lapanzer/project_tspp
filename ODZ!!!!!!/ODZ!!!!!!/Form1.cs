@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace ODZ______
 {
     public partial class Form1 : Form
@@ -14,8 +15,8 @@ namespace ODZ______
         public Form1()
         {
             InitializeComponent();
-            Form2 form2 = new Form2();
-            form2.Show();
+            Form2 f2 = new Form2();
+            f2.Show();
         }
     }
 }

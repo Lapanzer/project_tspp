@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace ODZ______
 {
@@ -11,11 +6,11 @@ namespace ODZ______
     {
         public static MySqlConnection GetDBConnection()
         {
-            string host = "127.0.0.1";
+            string host = "37.46.247.230";
             int port = 3306;
-            string database = "db_odz";
-            string username = "root";
-            string password = "EvilShark2SharkShark";
+            string database = "DB_odz";
+            string username = "editor";
+            string password = "xrxrxrxrxrxrxrxrxrxr";// "xCdr7zNDpNYHNXcr";
 
             return DBMySQLUtils.GetDBConnection(host, port, database, username, password);
         }
