@@ -40,28 +40,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comeBackBut = new System.Windows.Forms.Button();
             this.chBut = new System.Windows.Forms.Button();
             this.cB1 = new System.Windows.Forms.ComboBox();
-            this.sampleAbitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleAbitBS = new System.Windows.Forms.BindingSource(this.components);
             this.chSurnameTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chSchoolNumTxt = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chMarkTxt = new System.Windows.Forms.TextBox();
             this.chNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,19 +98,21 @@
             // 
             this.addSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addSurnameTxt.Location = new System.Drawing.Point(6, 49);
-            this.addSurnameTxt.MaxLength = 20;
+            this.addSurnameTxt.MaxLength = 45;
             this.addSurnameTxt.Name = "addSurnameTxt";
             this.addSurnameTxt.Size = new System.Drawing.Size(123, 24);
             this.addSurnameTxt.TabIndex = 1;
+            this.addSurnameTxt.TabStop = false;
             // 
             // addSchoolNumTxt
             // 
             this.addSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addSchoolNumTxt.Location = new System.Drawing.Point(405, 49);
-            this.addSchoolNumTxt.MaxLength = 20;
+            this.addSchoolNumTxt.MaxLength = 45;
             this.addSchoolNumTxt.Name = "addSchoolNumTxt";
             this.addSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
             this.addSchoolNumTxt.TabIndex = 1;
+            this.addSchoolNumTxt.TabStop = false;
             // 
             // addMarkTxt
             // 
@@ -121,15 +122,17 @@
             this.addMarkTxt.Name = "addMarkTxt";
             this.addMarkTxt.Size = new System.Drawing.Size(112, 24);
             this.addMarkTxt.TabIndex = 1;
+            this.addMarkTxt.TabStop = false;
             // 
             // addNameTxt
             // 
             this.addNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addNameTxt.Location = new System.Drawing.Point(146, 49);
-            this.addNameTxt.MaxLength = 20;
+            this.addNameTxt.MaxLength = 45;
             this.addNameTxt.Name = "addNameTxt";
             this.addNameTxt.Size = new System.Drawing.Size(108, 24);
             this.addNameTxt.TabIndex = 1;
+            this.addNameTxt.TabStop = false;
             // 
             // label4
             // 
@@ -143,7 +146,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 23);
+            this.label3.Location = new System.Drawing.Point(274, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 0;
@@ -152,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 23);
+            this.label2.Location = new System.Drawing.Point(153, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 16);
             this.label2.TabIndex = 0;
@@ -169,7 +172,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comeBackBut);
             this.groupBox2.Controls.Add(this.chBut);
             this.groupBox2.Controls.Add(this.cB1);
             this.groupBox2.Controls.Add(this.chSurnameTxt);
@@ -190,17 +192,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Змінити дані абітурієнта";
             // 
-            // comeBackBut
-            // 
-            this.comeBackBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comeBackBut.Location = new System.Drawing.Point(10, 286);
-            this.comeBackBut.Name = "comeBackBut";
-            this.comeBackBut.Size = new System.Drawing.Size(86, 30);
-            this.comeBackBut.TabIndex = 2;
-            this.comeBackBut.Text = "Повернутися";
-            this.comeBackBut.UseVisualStyleBackColor = true;
-            this.comeBackBut.Click += new System.EventHandler(this.ComeBackBut_Click);
-            // 
             // chBut
             // 
             this.chBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,29 +205,32 @@
             // 
             // cB1
             // 
-            this.cB1.DataSource = this.sampleAbitBindingSource;
+            this.cB1.DataSource = this.sampleAbitBS;
             this.cB1.DisplayMember = "Id";
+            this.cB1.DropDownHeight = 120;
             this.cB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cB1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cB1.FormattingEnabled = true;
+            this.cB1.IntegralHeight = false;
             this.cB1.Location = new System.Drawing.Point(233, 189);
             this.cB1.Name = "cB1";
             this.cB1.Size = new System.Drawing.Size(72, 24);
             this.cB1.TabIndex = 2;
             this.cB1.ValueMember = "Id";
             // 
-            // sampleAbitBindingSource
+            // sampleAbitBS
             // 
-            this.sampleAbitBindingSource.DataSource = typeof(ODZ______.SampleAbit);
+            this.sampleAbitBS.DataSource = typeof(ODZ______.SampleAbit);
             // 
             // chSurnameTxt
             // 
             this.chSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chSurnameTxt.Location = new System.Drawing.Point(6, 249);
-            this.chSurnameTxt.MaxLength = 20;
+            this.chSurnameTxt.MaxLength = 45;
             this.chSurnameTxt.Name = "chSurnameTxt";
             this.chSurnameTxt.Size = new System.Drawing.Size(123, 24);
             this.chSurnameTxt.TabIndex = 1;
+            this.chSurnameTxt.TabStop = false;
             // 
             // label5
             // 
@@ -251,15 +245,21 @@
             // 
             this.chSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chSchoolNumTxt.Location = new System.Drawing.Point(405, 249);
-            this.chSchoolNumTxt.MaxLength = 20;
+            this.chSchoolNumTxt.MaxLength = 45;
             this.chSchoolNumTxt.Name = "chSchoolNumTxt";
             this.chSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
             this.chSchoolNumTxt.TabIndex = 1;
+            this.chSchoolNumTxt.TabStop = false;
             // 
             // dGV1
             // 
+            this.dGV1.AllowUserToAddRows = false;
+            this.dGV1.AllowUserToDeleteRows = false;
+            this.dGV1.AllowUserToResizeColumns = false;
+            this.dGV1.AllowUserToResizeRows = false;
             this.dGV1.AutoGenerateColumns = false;
             this.dGV1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -267,68 +267,17 @@
             this.nameDataGridViewTextBoxColumn,
             this.markDataGridViewTextBoxColumn,
             this.numberOfSchoolDataGridViewTextBoxColumn});
-            this.dGV1.DataSource = this.sampleAbitBindingSource;
+            this.dGV1.DataSource = this.sampleAbitBS;
             this.dGV1.Location = new System.Drawing.Point(10, 21);
+            this.dGV1.MultiSelect = false;
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
             this.dGV1.RowHeadersVisible = false;
             this.dGV1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGV1.Size = new System.Drawing.Size(507, 150);
             this.dGV1.TabIndex = 0;
-            // 
-            // chMarkTxt
-            // 
-            this.chMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chMarkTxt.Location = new System.Drawing.Point(273, 249);
-            this.chMarkTxt.MaxLength = 20;
-            this.chMarkTxt.Name = "chMarkTxt";
-            this.chMarkTxt.Size = new System.Drawing.Size(112, 24);
-            this.chMarkTxt.TabIndex = 1;
-            // 
-            // chNameTxt
-            // 
-            this.chNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chNameTxt.Location = new System.Drawing.Point(146, 249);
-            this.chNameTxt.MaxLength = 20;
-            this.chNameTxt.Name = "chNameTxt";
-            this.chNameTxt.Size = new System.Drawing.Size(108, 24);
-            this.chNameTxt.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 223);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Прізвище";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(405, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Номер школи";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(143, 223);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Ім\'я";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(270, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Оцінки за іспити";
+            this.dGV1.SelectionChanged += new System.EventHandler(this.dGV1_SelectionChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -373,6 +322,62 @@
             this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.numberOfSchoolDataGridViewTextBoxColumn.Width = 130;
             // 
+            // chMarkTxt
+            // 
+            this.chMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chMarkTxt.Location = new System.Drawing.Point(273, 249);
+            this.chMarkTxt.MaxLength = 20;
+            this.chMarkTxt.Name = "chMarkTxt";
+            this.chMarkTxt.Size = new System.Drawing.Size(112, 24);
+            this.chMarkTxt.TabIndex = 1;
+            this.chMarkTxt.TabStop = false;
+            // 
+            // chNameTxt
+            // 
+            this.chNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chNameTxt.Location = new System.Drawing.Point(146, 249);
+            this.chNameTxt.MaxLength = 45;
+            this.chNameTxt.Name = "chNameTxt";
+            this.chNameTxt.Size = new System.Drawing.Size(108, 24);
+            this.chNameTxt.TabIndex = 1;
+            this.chNameTxt.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Прізвище";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(405, 223);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Номер школи";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(153, 223);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ім\'я";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(274, 223);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Оцінки за іспити";
+            // 
             // RedactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,12 +388,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "RedactionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Керування даними";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RedactionForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
             this.ResumeLayout(false);
 
@@ -419,8 +426,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.BindingSource sampleAbitBindingSource;
-        private System.Windows.Forms.Button comeBackBut;
+        private System.Windows.Forms.BindingSource sampleAbitBS;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;

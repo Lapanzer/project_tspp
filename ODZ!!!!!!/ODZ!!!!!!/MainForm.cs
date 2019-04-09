@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 
@@ -18,10 +12,20 @@ namespace ODZ______
         public MainForm()
         {
             InitializeComponent();
-            RedactionForm f2 = new RedactionForm();
+        }
+
+        private void ChangeDataBut_Click(object sender, EventArgs e)
+        {
+            RedactionForm f2 = new RedactionForm(this);
             f2.Show();
-            SearchForm f3 = new SearchForm();
+            Hide();
+        }
+
+        private void SelectDataBut_Click(object sender, EventArgs e)
+        {
+            SearchForm f3 = new SearchForm(this);
             f3.Show();
+            Hide();
         }
     }
 }

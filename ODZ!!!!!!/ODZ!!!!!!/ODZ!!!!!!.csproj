@@ -107,6 +107,7 @@
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\AbitResult.datasource" />
     <None Include="Properties\DataSources\SampleAbit.datasource" />
     <None Include="Properties\DataSources\SampleRow.datasource" />

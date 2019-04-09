@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.greeting = new System.Windows.Forms.Label();
-            this.changeData = new System.Windows.Forms.Button();
-            this.selectData = new System.Windows.Forms.Button();
+            this.changeDataBut = new System.Windows.Forms.Button();
+            this.selectDataBut = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,25 +58,27 @@
             this.greeting.Text = "Вітаємо в програмі \r\n\"Облік абітурієнтів\"";
             this.greeting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // changeData
+            // changeDataBut
             // 
-            this.changeData.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeData.Location = new System.Drawing.Point(77, 238);
-            this.changeData.Name = "changeData";
-            this.changeData.Size = new System.Drawing.Size(164, 36);
-            this.changeData.TabIndex = 1;
-            this.changeData.Text = "Курування даними\r\n";
-            this.changeData.UseVisualStyleBackColor = true;
+            this.changeDataBut.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeDataBut.Location = new System.Drawing.Point(77, 238);
+            this.changeDataBut.Name = "changeDataBut";
+            this.changeDataBut.Size = new System.Drawing.Size(164, 36);
+            this.changeDataBut.TabIndex = 1;
+            this.changeDataBut.Text = "Курування даними\r\n";
+            this.changeDataBut.UseVisualStyleBackColor = true;
+            this.changeDataBut.Click += new System.EventHandler(this.ChangeDataBut_Click);
             // 
-            // selectData
+            // selectDataBut
             // 
-            this.selectData.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectData.Location = new System.Drawing.Point(77, 301);
-            this.selectData.Name = "selectData";
-            this.selectData.Size = new System.Drawing.Size(164, 36);
-            this.selectData.TabIndex = 2;
-            this.selectData.Text = "Обробка даних";
-            this.selectData.UseVisualStyleBackColor = true;
+            this.selectDataBut.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectDataBut.Location = new System.Drawing.Point(77, 301);
+            this.selectDataBut.Name = "selectDataBut";
+            this.selectDataBut.Size = new System.Drawing.Size(164, 36);
+            this.selectDataBut.TabIndex = 2;
+            this.selectDataBut.Text = "Обробка даних";
+            this.selectDataBut.UseVisualStyleBackColor = true;
+            this.selectDataBut.Click += new System.EventHandler(this.SelectDataBut_Click);
             // 
             // label1
             // 
@@ -87,7 +89,7 @@
             this.label1.Size = new System.Drawing.Size(256, 104);
             this.label1.TabIndex = 2;
             this.label1.Text = " Дана програма дозволить \r\nвам керувати інформацією \r\nпро абітурієнтів та швидко " +
-                "\r\nїї оброблювати.";
+    "\r\nїї оброблювати.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
@@ -96,8 +98,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(320, 378);
-            this.Controls.Add(this.selectData);
-            this.Controls.Add(this.changeData);
+            this.Controls.Add(this.selectDataBut);
+            this.Controls.Add(this.changeDataBut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.greeting);
             this.Controls.Add(this.pictureBox1);
@@ -105,6 +107,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Облік абітурієнтів";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -116,8 +119,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label greeting;
-        private System.Windows.Forms.Button changeData;
-        private System.Windows.Forms.Button selectData;
+        private System.Windows.Forms.Button changeDataBut;
+        private System.Windows.Forms.Button selectDataBut;
         private System.Windows.Forms.Label label1;
     }
 }

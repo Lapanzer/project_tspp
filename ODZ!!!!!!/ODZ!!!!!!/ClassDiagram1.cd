@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ODZ______.AbitResult">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>AbitResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.DBMySQLUtils">
+    <Position X="5.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>DBMySQLUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.DBUtils">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.Program">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.SampleAbit">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>SampleAbit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.MainForm">
+    <Position X="6.75" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="changeDataBut" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="greeting" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="selectDataBut" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAABAAAACAQAACAAAAAAAAAAAAAEBgACA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.RedactionForm">
+    <Position X="8.25" Y="2.25" Width="2.25" />
+    <Members>
+      <Field Name="addBut" Hidden="true" />
+      <Field Name="addMarkTxt" Hidden="true" />
+      <Field Name="addNameTxt" Hidden="true" />
+      <Field Name="addSchoolNumTxt" Hidden="true" />
+      <Field Name="addSurnameTxt" Hidden="true" />
+      <Field Name="cB1" Hidden="true" />
+      <Field Name="chBut" Hidden="true" />
+      <Field Name="chMarkTxt" Hidden="true" />
+      <Field Name="chNameTxt" Hidden="true" />
+      <Field Name="chSchoolNumTxt" Hidden="true" />
+      <Field Name="chSurnameTxt" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dGV1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Field Name="idDataGridViewTextBoxColumn" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="markDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="nameDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="numberOfSchoolDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="sampleAbitBindingSource" Hidden="true" />
+      <Field Name="surnameDataGridViewTextBoxColumn" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>DECgAAACASAACBAAQASgAAADgAQIAgAAACFQAIoAIAQ=</HashCode>
+      <FileName>RedactionForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ODZ______.SearchForm">
+    <Position X="2.75" Y="2.5" Width="2" />
+    <Members>
+      <Field Name="abitResultX" Hidden="true" />
+      <Field Name="abitResultXY" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dGVX" Hidden="true" />
+      <Field Name="dGVXY" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="markDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="markDataGridViewTextBoxColumn1" Hidden="true" />
+      <Field Name="minMarkXTxt" Hidden="true" />
+      <Field Name="minMarkXYTxt" Hidden="true" />
+      <Field Name="nameDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="nameDataGridViewTextBoxColumn1" Hidden="true" />
+      <Field Name="saveDataBut" Hidden="true" />
+      <Field Name="schoolNumXYTxt" Hidden="true" />
+      <Field Name="searchXBut" Hidden="true" />
+      <Field Name="searchXYBut" Hidden="true" />
+      <Field Name="surnameDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="surnameDataGridViewTextBoxColumn1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAAACAAAACAgABAAAICwAQATCAQIhAAAASAAACgAIAA=</HashCode>
+      <FileName>SearchForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="System.Windows.Forms.Form.ControlCollection" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

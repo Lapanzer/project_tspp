@@ -25,7 +25,7 @@ namespace ODZ______
                 + ";port=" + port + ";User Id=" + username + ";password=" + password;
 
             MySqlConnection conn = new MySqlConnection(connString);
-
+            conn.Open();
             return conn;
         }
 
@@ -38,7 +38,6 @@ namespace ODZ______
         public static MySqlDataReader ExecQuery(string query, MySqlConnection conn)
         {
             MySqlCommand command = new MySqlCommand(query, conn);
-            command.Connection.Open();
             return command.ExecuteReader();
         }
     }

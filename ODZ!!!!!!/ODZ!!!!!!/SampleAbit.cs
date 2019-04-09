@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
-namespace ODZ______
+﻿namespace ODZ______
 {
-    class SampleAbit
+    class SampleAbit : AbitResult
     {
         public int Id { get; set; }
-        public string Surname { get; set; }
-        public string Name { get; set; }
-        public double Mark { get; set; }
         public string NumberOfSchool { get; set; }
 
         public SampleAbit() {}
         public SampleAbit(int id, string surname, string name, double mark, string numberOfSchool)
         {
-            this.Id = id;
-            this.Surname = surname;
-            this.Name = name;
-            this.Mark = mark;
-            this.NumberOfSchool = numberOfSchool;
+            Id = id;
+            Surname = surname;
+            Name = name;
+            Mark = mark;
+            NumberOfSchool = numberOfSchool;
         }
     }
 }
