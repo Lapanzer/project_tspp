@@ -163,6 +163,7 @@ namespace ODZ______
         private void RedactionForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             root.Show();
+            conn.Close();
         }
         
         private void dGV1_SelectionChanged(object sender, System.EventArgs e)

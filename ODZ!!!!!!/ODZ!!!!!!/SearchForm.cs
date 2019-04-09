@@ -60,6 +60,7 @@ namespace ODZ______
         private void SearchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             root.Show();
+            conn.Close();
         }
     }
 }
