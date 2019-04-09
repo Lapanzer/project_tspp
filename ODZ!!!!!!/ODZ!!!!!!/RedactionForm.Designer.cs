@@ -1,6 +1,6 @@
 ﻿namespace ODZ______
 {
-    partial class Form2
+    partial class RedactionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -48,25 +48,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.chSchoolNumTxt = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chMarkTxt = new System.Windows.Forms.TextBox();
             this.chNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.подключитьКБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьНовоеПодключениеКБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,7 +77,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 24);
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(523, 114);
             this.groupBox1.TabIndex = 0;
@@ -97,7 +93,7 @@
             this.addBut.TabIndex = 2;
             this.addBut.Text = "Додати\r\n";
             this.addBut.UseVisualStyleBackColor = true;
-            this.addBut.Click += new System.EventHandler(this.addBut_Click);
+            this.addBut.Click += new System.EventHandler(this.AddBut_Click);
             // 
             // addSurnameTxt
             // 
@@ -187,7 +183,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 142);
+            this.groupBox2.Location = new System.Drawing.Point(8, 124);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(523, 320);
             this.groupBox2.TabIndex = 0;
@@ -203,7 +199,7 @@
             this.comeBackBut.TabIndex = 2;
             this.comeBackBut.Text = "Повернутися";
             this.comeBackBut.UseVisualStyleBackColor = true;
-            this.comeBackBut.Click += new System.EventHandler(this.comeBackBut_Click);
+            this.comeBackBut.Click += new System.EventHandler(this.ComeBackBut_Click);
             // 
             // chBut
             // 
@@ -214,12 +210,13 @@
             this.chBut.TabIndex = 2;
             this.chBut.Text = "Змінити\r\n";
             this.chBut.UseVisualStyleBackColor = true;
-            this.chBut.Click += new System.EventHandler(this.chBut_Click);
+            this.chBut.Click += new System.EventHandler(this.ChBut_Click);
             // 
             // cB1
             // 
             this.cB1.DataSource = this.sampleAbitBindingSource;
             this.cB1.DisplayMember = "Id";
+            this.cB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cB1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cB1.FormattingEnabled = true;
             this.cB1.Location = new System.Drawing.Point(233, 189);
@@ -262,6 +259,7 @@
             // dGV1
             // 
             this.dGV1.AutoGenerateColumns = false;
+            this.dGV1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -273,50 +271,10 @@
             this.dGV1.Location = new System.Drawing.Point(10, 21);
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
+            this.dGV1.RowHeadersVisible = false;
             this.dGV1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGV1.Size = new System.Drawing.Size(507, 150);
             this.dGV1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.idDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // markDataGridViewTextBoxColumn
-            // 
-            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
-            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
-            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
-            this.markDataGridViewTextBoxColumn.ReadOnly = true;
-            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // numberOfSchoolDataGridViewTextBoxColumn
-            // 
-            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
-            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "Номер школи";
-            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
-            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // chMarkTxt
             // 
@@ -372,45 +330,59 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Оцінки за іспити";
             // 
-            // menuStrip1
+            // idDataGridViewTextBoxColumn
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.подключитьКБДToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(539, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.idDataGridViewTextBoxColumn.Width = 70;
             // 
-            // подключитьКБДToolStripMenuItem
+            // surnameDataGridViewTextBoxColumn
             // 
-            this.подключитьКБДToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьНовоеПодключениеКБДToolStripMenuItem});
-            this.подключитьКБДToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.подключитьКБДToolStripMenuItem.Name = "подключитьКБДToolStripMenuItem";
-            this.подключитьКБДToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.подключитьКБДToolStripMenuItem.Text = "Подключить к БД";
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.surnameDataGridViewTextBoxColumn.Width = 110;
             // 
-            // создатьНовоеПодключениеКБДToolStripMenuItem
+            // nameDataGridViewTextBoxColumn
             // 
-            this.создатьНовоеПодключениеКБДToolStripMenuItem.Name = "создатьНовоеПодключениеКБДToolStripMenuItem";
-            this.создатьНовоеПодключениеКБДToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
-            this.создатьНовоеПодключениеКБДToolStripMenuItem.Text = "Создать новое подключение к БД";
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Form2
+            // markDataGridViewTextBoxColumn
+            // 
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // numberOfSchoolDataGridViewTextBoxColumn
+            // 
+            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
+            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "Номер школи";
+            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
+            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.numberOfSchoolDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // RedactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 467);
+            this.ClientSize = new System.Drawing.Size(539, 442);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form2";
+            this.Name = "RedactionForm";
             this.Text = " Керування даними";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -418,10 +390,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -450,15 +419,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem подключитьКБДToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem создатьНовоеПодключениеКБДToolStripMenuItem;
         private System.Windows.Forms.BindingSource sampleAbitBindingSource;
+        private System.Windows.Forms.Button comeBackBut;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfSchoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button comeBackBut;
     }
 }

@@ -1,0 +1,14 @@
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\MySql.Data.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\MySql.Data.xml
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.MainForm.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.RedactionForm.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.Properties.Resources.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.GenerateResource.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.CoreCompileInputs.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.CopyComplete
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csprojAssemblyReference.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.SearchForm.resources

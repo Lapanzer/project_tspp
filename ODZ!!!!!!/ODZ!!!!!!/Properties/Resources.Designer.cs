@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ODZ______.Properties
+namespace ODZ.Properties
 {
 
 

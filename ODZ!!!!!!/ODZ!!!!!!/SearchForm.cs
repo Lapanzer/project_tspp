@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace ODZ______
 {
-    public partial class Form1 : Form
+    public partial class SearchForm : Form
     {
-        public Form1()
+        public SearchForm()
         {
             InitializeComponent();
-            Form2 f2 = new Form2();
-            f2.Show();
+            dGVX.AllowUserToAddRows = false;
+            dGVXY.AllowUserToAddRows = false;
         }
     }
 }

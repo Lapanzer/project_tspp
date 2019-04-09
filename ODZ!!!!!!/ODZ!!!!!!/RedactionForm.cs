@@ -4,16 +4,20 @@ using MySql.Data.MySqlClient;
 
 namespace ODZ______
 {
-    public partial class Form2 : Form
+    /// <summary>
+    /// Form that provide modification data
+    /// </summary>
+    public partial class RedactionForm : Form
     {
         private List<SampleAbit> sa = new List<SampleAbit>();
         private MySqlConnection conn;
 
-        public Form2()
+        public RedactionForm()
         {
             InitializeComponent();
             dGV1.AllowUserToAddRows = false;
             DBConnect();
+            SelectAllData();
         }
 
         /// <summary>
@@ -22,15 +26,22 @@ namespace ODZ______
         private void DBConnect()
         {
             conn = DBUtils.GetDBConnection();
-            MySqlDataReader reader;
-            reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
+        }
+
+        /// <summary>
+        /// Methot to read all data from table abits
+        /// </summary>
+        private void SelectAllData()
+        {
+            sampleAbitBindingSource.Clear();
+            MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
             while (reader.Read())
             {
                 sampleAbitBindingSource.Add(new SampleAbit(int.Parse(reader["id"].ToString()),
-                                      reader["surname"].ToString(),
-                                      reader["name"].ToString(),
-                                      float.Parse(reader["mark"].ToString()),
-                                      reader["schoolNumber"].ToString()));
+                                                            reader["surname"].ToString(),
+                                                            reader["name"].ToString(),
+                                                            float.Parse(reader["mark"].ToString()),
+                                                            reader["schoolNumber"].ToString()));
             }
             reader.Close();
         }
@@ -40,11 +51,13 @@ namespace ODZ______
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event arguments</param>
-        private void addBut_Click(object sender, System.EventArgs e)
+        private void AddBut_Click(object sender, System.EventArgs e)
         {
             string surname = addSurnameTxt.Text;
             string name = addNameTxt.Text;
-            //..
+            string mark = addMarkTxt.Text;
+            string schoolNum = addSchoolNumTxt.Text;
+
         }
 
         /// <summary>
@@ -52,7 +65,7 @@ namespace ODZ______
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event arguments</param>
-        private void chBut_Click(object sender, System.EventArgs e)
+        private void ChBut_Click(object sender, System.EventArgs e)
         {
             //..
         }
@@ -62,7 +75,7 @@ namespace ODZ______
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event arguments</param>
-        private void comeBackBut_Click(object sender, System.EventArgs e)
+        private void ComeBackBut_Click(object sender, System.EventArgs e)
         {
             //..
         }
