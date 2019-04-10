@@ -10,7 +10,7 @@ namespace ODZ______
         /// <returns>MySQLConection</returns>
         public static MySqlConnection GetDBConnection()
         {
-            string host = "37.46.247.230";
+            string host = "127.0.0.1";
             int port = 3306;
             string database = "DB_odz";
             string username = "editor";

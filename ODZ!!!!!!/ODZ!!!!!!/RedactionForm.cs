@@ -88,12 +88,15 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
+
             InsertRow(new SampleAbit(0, surname, name, mark, schoolNum));
+
+            SelectAllData();
+
             addSurnameTxt.Text = "";
             addNameTxt.Text = "";
             addMarkTxt.Text = "";
             addSchoolNumTxt.Text = "";
-            SelectAllData();
         }
 
         /// <summary>
@@ -137,7 +140,9 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
+
             UpdateRow(new SampleAbit(0, surname, name, mark, schoolNum));
+
             SelectAllData();
         }
         

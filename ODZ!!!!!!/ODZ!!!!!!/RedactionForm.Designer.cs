@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RedactionForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.addBut = new System.Windows.Forms.Button();
             this.addSurnameTxt = new System.Windows.Forms.TextBox();
@@ -47,17 +48,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.chSchoolNumTxt = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chMarkTxt = new System.Windows.Forms.TextBox();
             this.chNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBS)).BeginInit();
@@ -255,6 +256,7 @@
             // 
             this.dGV1.AllowUserToAddRows = false;
             this.dGV1.AllowUserToDeleteRows = false;
+            this.dGV1.AllowUserToOrderColumns = true;
             this.dGV1.AllowUserToResizeColumns = false;
             this.dGV1.AllowUserToResizeRows = false;
             this.dGV1.AutoGenerateColumns = false;
@@ -278,49 +280,6 @@
             this.dGV1.Size = new System.Drawing.Size(507, 150);
             this.dGV1.TabIndex = 0;
             this.dGV1.SelectionChanged += new System.EventHandler(this.dGV1_SelectionChanged);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.idDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.surnameDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // markDataGridViewTextBoxColumn
-            // 
-            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
-            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
-            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
-            this.markDataGridViewTextBoxColumn.ReadOnly = true;
-            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // numberOfSchoolDataGridViewTextBoxColumn
-            // 
-            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
-            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "Номер школи";
-            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
-            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.numberOfSchoolDataGridViewTextBoxColumn.Width = 130;
             // 
             // chMarkTxt
             // 
@@ -378,14 +337,59 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Оцінки за іспити";
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.surnameDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // markDataGridViewTextBoxColumn
+            // 
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // numberOfSchoolDataGridViewTextBoxColumn
+            // 
+            this.numberOfSchoolDataGridViewTextBoxColumn.DataPropertyName = "NumberOfSchool";
+            this.numberOfSchoolDataGridViewTextBoxColumn.HeaderText = "Номер школи";
+            this.numberOfSchoolDataGridViewTextBoxColumn.Name = "numberOfSchoolDataGridViewTextBoxColumn";
+            this.numberOfSchoolDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.numberOfSchoolDataGridViewTextBoxColumn.Width = 130;
+            // 
             // RedactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 442);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "RedactionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

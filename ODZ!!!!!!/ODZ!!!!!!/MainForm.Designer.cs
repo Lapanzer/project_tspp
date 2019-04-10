@@ -65,7 +65,7 @@
             this.changeDataBut.Name = "changeDataBut";
             this.changeDataBut.Size = new System.Drawing.Size(164, 36);
             this.changeDataBut.TabIndex = 1;
-            this.changeDataBut.Text = "Курування даними\r\n";
+            this.changeDataBut.Text = "Керування даними\r\n";
             this.changeDataBut.UseVisualStyleBackColor = true;
             this.changeDataBut.Click += new System.EventHandler(this.ChangeDataBut_Click);
             // 
@@ -105,6 +105,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
