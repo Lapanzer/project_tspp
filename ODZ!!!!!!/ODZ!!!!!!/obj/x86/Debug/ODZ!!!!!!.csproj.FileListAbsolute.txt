@@ -17,7 +17,6 @@ D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.GenerateR
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.exe
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.pdb
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.dll
-D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.xml
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csprojAssemblyReference.cache
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CoreCompileInputs.cache
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.CopyComplete
