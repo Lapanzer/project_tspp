@@ -51,7 +51,7 @@
             // 
             this.greeting.AutoSize = true;
             this.greeting.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.greeting.Location = new System.Drawing.Point(72, 20);
+            this.greeting.Location = new System.Drawing.Point(72, 22);
             this.greeting.Name = "greeting";
             this.greeting.Size = new System.Drawing.Size(185, 52);
             this.greeting.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(34, 82);
+            this.label1.Location = new System.Drawing.Point(34, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 104);
             this.label1.TabIndex = 2;

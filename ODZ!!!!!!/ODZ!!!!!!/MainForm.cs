@@ -11,7 +11,6 @@ namespace ODZ______
         public MainForm()
         {
             InitializeComponent();
-            
         }
 
         private void ChangeDataBut_Click(object sender, EventArgs e)
