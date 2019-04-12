@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Office.Interop.Word;
 using abit = System.Windows.Forms;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,16 +26,13 @@ namespace ODZ______
         }
 
         public void AddHeader() {
-            foreach (Section section in document.Sections)
-            {
-                //Get the header range and add the header details.  
-                Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
-                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                headerRange.Font.ColorIndex = WdColorIndex.wdBlue;
-                headerRange.Font.Size = 20;
-                headerRange.Text = "Звіт";
-            }
+            
+                var pText1 = document.Paragraphs.Add();
+                pText1.Range.Text = "Звіт";
+                pText1.Range.Bold = 1;
+                pText1.Range.Font.Size = 20;
+                pText1.Format.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                pText1.Range.InsertParagraphAfter();
 
         }
 
@@ -42,6 +40,10 @@ namespace ODZ______
         {
             var pText = document.Paragraphs.Add();
             pText.Range.Text = text;
+            pText.Range.Bold = 0;
+            pText.Range.Font.Size = 14;
+            pText.Range.Font.Name = "Times New Roman";
+            pText.Format.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
             pText.Range.InsertParagraphAfter();
 
         }
@@ -52,7 +54,7 @@ namespace ODZ______
             cell.Range.Font.Bold = 1;
             //other format properties goes here  
             cell.Range.Font.Name = "verdana";
-            cell.Range.Font.Size = 10;
+            cell.Range.Font.Size = 14;
             //cell.Range.Font.ColorIndex = WdColorIndex.wdGray25;                              
             cell.Shading.BackgroundPatternColor = WdColor.wdColorGray25;
             //Center alignment for the Header cells  
