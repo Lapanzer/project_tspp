@@ -39,6 +39,7 @@ namespace ODZ______
                 MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
+            DBMySQLUtils.CheckTable(conn);
             sampleAbitBS.Clear();
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
             while (reader.Read())
@@ -93,6 +94,13 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            {
+                MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
+                addSchoolNumTxt.Focus();
+                addSchoolNumTxt.SelectAll();
+                return;
+            }
 
             InsertRow(new SampleAbit(0, surname, name, mark, schoolNum));
 
@@ -145,6 +153,13 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            {
+                MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
+                chSchoolNumTxt.Focus();
+                chSchoolNumTxt.SelectAll();
+                return;
+            }
 
             UpdateRow(new SampleAbit(0, surname, name, mark, schoolNum));
 
@@ -155,7 +170,7 @@ namespace ODZ______
         {
             if (!conn.Ping())
                 return;
-
+            DBMySQLUtils.CheckTable(conn);
             string query = "insert into abits(surname, name, mark, schoolNumber) values('" +
                 sa.Surname + "', '" + sa.Name + "', '" 
                 + sa.Mark.ToString().Replace(',','.') + "', '" 
@@ -167,7 +182,7 @@ namespace ODZ______
         {
             if (!conn.Ping())
                 return;
-
+            DBMySQLUtils.CheckTable(conn);
             string query = "update abits set surname = '" +
                 sa.Surname + "', name = '" + sa.Name 
                 + "', mark = '" + sa.Mark.ToString().Replace(',', '.') 

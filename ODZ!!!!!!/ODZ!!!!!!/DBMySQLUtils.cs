@@ -46,8 +46,37 @@ namespace ODZ______
         /// <returns>MySqlDataReader</returns>
         public static MySqlDataReader ExecQuery(string query, MySqlConnection conn)
         {
-            MySqlCommand command = new MySqlCommand(query, conn);
-            return command.ExecuteReader();
+            try
+            {
+                MySqlCommand command = new MySqlCommand(query, conn);
+                return command.ExecuteReader();
+            }
+            catch
+            {
+                MessageBox.Show("Схоже, з базою даних коїться неладне. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                return null;
+            }
+        }
+
+        public static void CheckTable(MySqlConnection conn)
+        {
+            if (!conn.Ping())
+                return;
+            
+            try
+            {
+                ExecQuery("describe abits;", conn).Close();
+            }
+            catch
+            {
+                MySqlDataReader rd1 = ExecQuery("create table abits(id integer primary key auto_increment, "
+                    + "name varchar(45), surname varchar(45), mark double, schoolNumber varchar(45));", conn);
+                rd1.Close();
+            }
+            finally
+            {
+                
+            }
         }
     }
 }
