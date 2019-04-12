@@ -12,9 +12,9 @@ namespace ODZ______
         {
             string host = "127.0.0.1";
             int port = 3306;
-            string database = "DB_odz";
-            string username = "editor";
-            string password = "xrxrxrxrxrxrxrxrxrxr";// "xCdr7zNDpNYHNXcr";
+            string database = "db_odz";
+            string username = "root";
+            string password = "vadim245";// "xCdr7zNDpNYHNXcr";
 
             return DBMySQLUtils.GetDBConnection(host, port, database, username, password);
         }

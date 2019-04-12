@@ -180,5 +180,10 @@ namespace ODZ______
             chMarkTxt.Text = dGV1.SelectedRows[0].Cells[3].Value.ToString().Replace('.', ',');
             chSchoolNumTxt.Text = dGV1.SelectedRows[0].Cells[4].Value.ToString();
         }
+
+        private void dGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

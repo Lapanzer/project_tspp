@@ -48,17 +48,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.chSchoolNumTxt = new System.Windows.Forms.TextBox();
             this.dGV1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chMarkTxt = new System.Windows.Forms.TextBox();
             this.chNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfSchoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sampleAbitBS)).BeginInit();
@@ -77,9 +77,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
+            this.groupBox1.Location = new System.Drawing.Point(11, 7);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 114);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(697, 140);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Додати абітурієнта";
@@ -87,9 +89,10 @@
             // addBut
             // 
             this.addBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBut.Location = new System.Drawing.Point(218, 79);
+            this.addBut.Location = new System.Drawing.Point(291, 97);
+            this.addBut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addBut.Name = "addBut";
-            this.addBut.Size = new System.Drawing.Size(89, 30);
+            this.addBut.Size = new System.Drawing.Size(119, 37);
             this.addBut.TabIndex = 2;
             this.addBut.Text = "Додати\r\n";
             this.addBut.UseVisualStyleBackColor = true;
@@ -98,76 +101,84 @@
             // addSurnameTxt
             // 
             this.addSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addSurnameTxt.Location = new System.Drawing.Point(6, 49);
+            this.addSurnameTxt.Location = new System.Drawing.Point(8, 60);
+            this.addSurnameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addSurnameTxt.MaxLength = 45;
             this.addSurnameTxt.Name = "addSurnameTxt";
-            this.addSurnameTxt.Size = new System.Drawing.Size(123, 24);
+            this.addSurnameTxt.Size = new System.Drawing.Size(163, 29);
             this.addSurnameTxt.TabIndex = 1;
             this.addSurnameTxt.TabStop = false;
             // 
             // addSchoolNumTxt
             // 
             this.addSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addSchoolNumTxt.Location = new System.Drawing.Point(405, 49);
+            this.addSchoolNumTxt.Location = new System.Drawing.Point(540, 60);
+            this.addSchoolNumTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addSchoolNumTxt.MaxLength = 45;
             this.addSchoolNumTxt.Name = "addSchoolNumTxt";
-            this.addSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
+            this.addSchoolNumTxt.Size = new System.Drawing.Size(148, 29);
             this.addSchoolNumTxt.TabIndex = 1;
             this.addSchoolNumTxt.TabStop = false;
             // 
             // addMarkTxt
             // 
             this.addMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addMarkTxt.Location = new System.Drawing.Point(273, 49);
+            this.addMarkTxt.Location = new System.Drawing.Point(364, 60);
+            this.addMarkTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addMarkTxt.MaxLength = 20;
             this.addMarkTxt.Name = "addMarkTxt";
-            this.addMarkTxt.Size = new System.Drawing.Size(112, 24);
+            this.addMarkTxt.Size = new System.Drawing.Size(148, 29);
             this.addMarkTxt.TabIndex = 1;
             this.addMarkTxt.TabStop = false;
             // 
             // addNameTxt
             // 
             this.addNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNameTxt.Location = new System.Drawing.Point(146, 49);
+            this.addNameTxt.Location = new System.Drawing.Point(195, 60);
+            this.addNameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addNameTxt.MaxLength = 45;
             this.addNameTxt.Name = "addNameTxt";
-            this.addNameTxt.Size = new System.Drawing.Size(108, 24);
+            this.addNameTxt.Size = new System.Drawing.Size(143, 29);
             this.addNameTxt.TabIndex = 1;
             this.addNameTxt.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(405, 23);
+            this.label4.Location = new System.Drawing.Point(540, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.Size = new System.Drawing.Size(122, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Номер школи";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(274, 23);
+            this.label3.Location = new System.Drawing.Point(365, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.Size = new System.Drawing.Size(147, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Оцінки за іспити";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 23);
+            this.label2.Location = new System.Drawing.Point(204, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 16);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ім\'я";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 23);
+            this.label1.Location = new System.Drawing.Point(8, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Прізвище";
             // 
@@ -186,9 +197,11 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 124);
+            this.groupBox2.Location = new System.Drawing.Point(11, 153);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 320);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(697, 394);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Змінити дані абітурієнта";
@@ -196,9 +209,10 @@
             // chBut
             // 
             this.chBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chBut.Location = new System.Drawing.Point(218, 286);
+            this.chBut.Location = new System.Drawing.Point(291, 352);
+            this.chBut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chBut.Name = "chBut";
-            this.chBut.Size = new System.Drawing.Size(89, 30);
+            this.chBut.Size = new System.Drawing.Size(119, 37);
             this.chBut.TabIndex = 2;
             this.chBut.Text = "Змінити\r\n";
             this.chBut.UseVisualStyleBackColor = true;
@@ -213,9 +227,10 @@
             this.cB1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cB1.FormattingEnabled = true;
             this.cB1.IntegralHeight = false;
-            this.cB1.Location = new System.Drawing.Point(233, 189);
+            this.cB1.Location = new System.Drawing.Point(311, 233);
+            this.cB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cB1.Name = "cB1";
-            this.cB1.Size = new System.Drawing.Size(72, 24);
+            this.cB1.Size = new System.Drawing.Size(95, 28);
             this.cB1.TabIndex = 2;
             this.cB1.ValueMember = "Id";
             // 
@@ -226,29 +241,32 @@
             // chSurnameTxt
             // 
             this.chSurnameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chSurnameTxt.Location = new System.Drawing.Point(6, 249);
+            this.chSurnameTxt.Location = new System.Drawing.Point(8, 306);
+            this.chSurnameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chSurnameTxt.MaxLength = 45;
             this.chSurnameTxt.Name = "chSurnameTxt";
-            this.chSurnameTxt.Size = new System.Drawing.Size(123, 24);
+            this.chSurnameTxt.Size = new System.Drawing.Size(163, 29);
             this.chSurnameTxt.TabIndex = 1;
             this.chSurnameTxt.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 192);
+            this.label5.Location = new System.Drawing.Point(21, 236);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 16);
+            this.label5.Size = new System.Drawing.Size(275, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Оберіть ID абітурієнта для змін";
             // 
             // chSchoolNumTxt
             // 
             this.chSchoolNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chSchoolNumTxt.Location = new System.Drawing.Point(405, 249);
+            this.chSchoolNumTxt.Location = new System.Drawing.Point(540, 306);
+            this.chSchoolNumTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chSchoolNumTxt.MaxLength = 45;
             this.chSchoolNumTxt.Name = "chSchoolNumTxt";
-            this.chSchoolNumTxt.Size = new System.Drawing.Size(112, 24);
+            this.chSchoolNumTxt.Size = new System.Drawing.Size(148, 29);
             this.chSchoolNumTxt.TabIndex = 1;
             this.chSchoolNumTxt.TabStop = false;
             // 
@@ -270,72 +288,18 @@
             this.markDataGridViewTextBoxColumn,
             this.numberOfSchoolDataGridViewTextBoxColumn});
             this.dGV1.DataSource = this.sampleAbitBS;
-            this.dGV1.Location = new System.Drawing.Point(10, 21);
+            this.dGV1.Location = new System.Drawing.Point(13, 26);
+            this.dGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dGV1.MultiSelect = false;
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
             this.dGV1.RowHeadersVisible = false;
             this.dGV1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV1.Size = new System.Drawing.Size(507, 150);
+            this.dGV1.Size = new System.Drawing.Size(676, 185);
             this.dGV1.TabIndex = 0;
+            this.dGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV1_CellContentClick);
             this.dGV1.SelectionChanged += new System.EventHandler(this.dGV1_SelectionChanged);
-            // 
-            // chMarkTxt
-            // 
-            this.chMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chMarkTxt.Location = new System.Drawing.Point(273, 249);
-            this.chMarkTxt.MaxLength = 20;
-            this.chMarkTxt.Name = "chMarkTxt";
-            this.chMarkTxt.Size = new System.Drawing.Size(112, 24);
-            this.chMarkTxt.TabIndex = 1;
-            this.chMarkTxt.TabStop = false;
-            // 
-            // chNameTxt
-            // 
-            this.chNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chNameTxt.Location = new System.Drawing.Point(146, 249);
-            this.chNameTxt.MaxLength = 45;
-            this.chNameTxt.Name = "chNameTxt";
-            this.chNameTxt.Size = new System.Drawing.Size(108, 24);
-            this.chNameTxt.TabIndex = 1;
-            this.chNameTxt.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 223);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Прізвище";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(405, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Номер школи";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(153, 223);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Ім\'я";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(274, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Оцінки за іспити";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -381,15 +345,78 @@
             this.numberOfSchoolDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.numberOfSchoolDataGridViewTextBoxColumn.Width = 130;
             // 
+            // chMarkTxt
+            // 
+            this.chMarkTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chMarkTxt.Location = new System.Drawing.Point(364, 306);
+            this.chMarkTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chMarkTxt.MaxLength = 20;
+            this.chMarkTxt.Name = "chMarkTxt";
+            this.chMarkTxt.Size = new System.Drawing.Size(148, 29);
+            this.chMarkTxt.TabIndex = 1;
+            this.chMarkTxt.TabStop = false;
+            // 
+            // chNameTxt
+            // 
+            this.chNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chNameTxt.Location = new System.Drawing.Point(195, 306);
+            this.chNameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chNameTxt.MaxLength = 45;
+            this.chNameTxt.Name = "chNameTxt";
+            this.chNameTxt.Size = new System.Drawing.Size(143, 29);
+            this.chNameTxt.TabIndex = 1;
+            this.chNameTxt.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 274);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Прізвище";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(540, 274);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Номер школи";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(204, 274);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Ім\'я";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(365, 274);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(147, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Оцінки за іспити";
+            // 
             // RedactionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 442);
+            this.ClientSize = new System.Drawing.Size(719, 544);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "RedactionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

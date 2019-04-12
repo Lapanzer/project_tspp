@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Microsoft.Win32;
+
+using Word =  Microsoft.Office.Interop.Word;
 
 namespace ODZ______
 {
@@ -94,9 +97,47 @@ namespace ODZ______
 
         private void SaveDataBut_Click(object sender, EventArgs e)
         {
-            //abitResultX;
-            //abitResultXY;
-            //...
+            
+                if (abitResultXY.Count > 0 || abitResultX.Count > 0)
+                {
+
+                    WordTable writeToWord = new WordTable();
+                    writeToWord.AddHeader();
+                    writeToWord.AddParagraphs("\n");
+                    if ( abitResultXY.Count == 0 && abitResultX.Count > 0 )
+                    {
+                        writeToWord.AddParagraphs("Список зарахованих.");
+                        writeToWord.AddTable(abitResultX);
+
+                    }
+                    else if ( abitResultXY.Count > 0 && abitResultX.Count == 0 )
+                    {
+
+                        writeToWord.AddParagraphs("Список зарахованих по школі.");
+                        writeToWord.AddTable(abitResultXY);
+                }
+                    else if (abitResultXY.Count > 0 && abitResultX.Count > 0)
+                    {
+
+                        writeToWord.AddParagraphs("Список зарахованих.");
+                        writeToWord.AddTable(abitResultX);
+                        writeToWord.AddParagraphs("\n\n");
+                        writeToWord.AddParagraphs("Список зарахованих по школі.");
+                        writeToWord.AddTable(abitResultXY);
+
+                }
+                    
+
+                    writeToWord.Save();
+                    writeToWord.Close();
+
+                }
+                else
+                 {
+                    MessageBox.Show("Немає даних для запису!", "Помилка");
+                 }
+
+
         }
 
         /// <summary>
@@ -108,6 +149,11 @@ namespace ODZ______
         {
             root.Show();
             conn.Close();
+        }
+
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
