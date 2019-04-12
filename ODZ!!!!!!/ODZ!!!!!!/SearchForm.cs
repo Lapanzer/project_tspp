@@ -30,6 +30,11 @@ namespace ODZ______
         private void SelectXData(float mark)
         {
             abitResultX.Clear();
+            if (!conn.Ping())
+            {
+                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                return;
+            }
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                                                            + mark.ToString().Replace(',', '.') + ";", conn);
             while (reader.Read())
@@ -44,6 +49,11 @@ namespace ODZ______
         private void SelectXYData(float mark, string schoolNum)
         {
             abitResultXY.Clear();
+            if (!conn.Ping())
+            {
+                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                return;
+            }
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                            + mark.ToString().Replace(',','.') + " and schoolNumber='" + schoolNum +"';", conn);
             while (reader.Read())

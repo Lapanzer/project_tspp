@@ -32,31 +32,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGVX = new System.Windows.Forms.DataGridView();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abitResultX = new System.Windows.Forms.BindingSource(this.components);
             this.searchXBut = new System.Windows.Forms.Button();
             this.minMarkXTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dGVXY = new System.Windows.Forms.DataGridView();
+            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abitResultXY = new System.Windows.Forms.BindingSource(this.components);
             this.searchXYBut = new System.Windows.Forms.Button();
             this.schoolNumXYTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.minMarkXYTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.saveDataBut = new System.Windows.Forms.Button();
-            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abitResultXY = new System.Windows.Forms.BindingSource(this.components);
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abitResultX = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abitResultX)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVXY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abitResultXY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abitResultX)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,6 +93,34 @@
             this.dGVX.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGVX.Size = new System.Drawing.Size(303, 133);
             this.dGVX.TabIndex = 3;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // markDataGridViewTextBoxColumn
+            // 
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // abitResultX
+            // 
+            this.abitResultX.DataSource = typeof(ODZ______.AbitResult);
             // 
             // searchXBut
             // 
@@ -162,6 +190,34 @@
             this.dGVXY.Size = new System.Drawing.Size(304, 133);
             this.dGVXY.TabIndex = 3;
             // 
+            // surnameDataGridViewTextBoxColumn1
+            // 
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // markDataGridViewTextBoxColumn1
+            // 
+            this.markDataGridViewTextBoxColumn1.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn1.HeaderText = "Оцінка";
+            this.markDataGridViewTextBoxColumn1.Name = "markDataGridViewTextBoxColumn1";
+            this.markDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.markDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // abitResultXY
+            // 
+            this.abitResultXY.DataSource = typeof(ODZ______.AbitResult);
+            // 
             // searchXYBut
             // 
             this.searchXYBut.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,62 +280,6 @@
             this.saveDataBut.UseVisualStyleBackColor = true;
             this.saveDataBut.Click += new System.EventHandler(this.SaveDataBut_Click);
             // 
-            // surnameDataGridViewTextBoxColumn1
-            // 
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Прізвище";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
-            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.surnameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Ім\'я";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // markDataGridViewTextBoxColumn1
-            // 
-            this.markDataGridViewTextBoxColumn1.DataPropertyName = "Mark";
-            this.markDataGridViewTextBoxColumn1.HeaderText = "Оцінка";
-            this.markDataGridViewTextBoxColumn1.Name = "markDataGridViewTextBoxColumn1";
-            this.markDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.markDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // abitResultXY
-            // 
-            this.abitResultXY.DataSource = typeof(ODZ______.AbitResult);
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.surnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // markDataGridViewTextBoxColumn
-            // 
-            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
-            this.markDataGridViewTextBoxColumn.HeaderText = "Оцінка";
-            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
-            this.markDataGridViewTextBoxColumn.ReadOnly = true;
-            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // abitResultX
-            // 
-            this.abitResultX.DataSource = typeof(ODZ______.AbitResult);
-            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,7 +288,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.saveDataBut);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -298,11 +298,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abitResultX)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVXY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abitResultXY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abitResultX)).EndInit();
             this.ResumeLayout(false);
 
         }

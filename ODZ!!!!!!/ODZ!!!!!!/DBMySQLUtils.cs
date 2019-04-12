@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Windows.Forms;
+using System;
+using MySql.Data.MySqlClient;
 
 namespace ODZ______
 {
@@ -25,7 +27,14 @@ namespace ODZ______
                 + ";port=" + port + ";User Id=" + username + ";password=" + password;
 
             MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+            }
             return conn;
         }
 

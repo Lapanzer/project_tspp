@@ -14,7 +14,7 @@ namespace ODZ______
             int port = 3306;
             string database = "db_odz";
             string username = "root";
-            string password = "xrxrxrxrxrxrxrxrxrxr";// "xCdr7zNDpNYHNXcr";
+            string password = "1xrxrxrxrxrxrxrxrxrxr";// "xCdr7zNDpNYHNXcr";
 
             return DBMySQLUtils.GetDBConnection(host, port, database, username, password);
         }

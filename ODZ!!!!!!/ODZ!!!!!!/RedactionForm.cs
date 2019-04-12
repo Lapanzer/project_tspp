@@ -34,6 +34,11 @@ namespace ODZ______
         /// </summary>
         private void SelectAllData()
         {
+            if (!conn.Ping())
+            {
+                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                return;
+            }
             sampleAbitBS.Clear();
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
             while (reader.Read())
@@ -148,6 +153,9 @@ namespace ODZ______
         
         private void InsertRow(SampleAbit sa)
         {
+            if (!conn.Ping())
+                return;
+
             string query = "insert into abits(surname, name, mark, schoolNumber) values('" +
                 sa.Surname + "', '" + sa.Name + "', '" 
                 + sa.Mark.ToString().Replace(',','.') + "', '" 
@@ -157,6 +165,9 @@ namespace ODZ______
 
         private void UpdateRow(SampleAbit sa)
         {
+            if (!conn.Ping())
+                return;
+
             string query = "update abits set surname = '" +
                 sa.Surname + "', name = '" + sa.Name 
                 + "', mark = '" + sa.Mark.ToString().Replace(',', '.') 
