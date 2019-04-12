@@ -6,10 +6,10 @@ namespace ODZ______
 {
     class DBUtils
     {
-        private static string host = "127.0.0.1";
-        private static int port = 3306;
-        private static string username = "root";
-        private static string password = "";
+        private static string host;
+        private static int port;
+        private static string username;
+        private static string password;
 
         /// <summary>
         /// Method of setting conection parameters
@@ -30,6 +30,10 @@ namespace ODZ______
             catch
             {
                 CreateConfigFile();
+                host = "127.0.0.1";
+                port = 3306;
+                username = "root";
+                password = "xrxrxrxrxrxrxrxrxrxr";
                 return;
             }
             string line;
@@ -71,7 +75,7 @@ namespace ODZ______
             sw.WriteLine("host 127.0.0.1");
             sw.WriteLine("port 3306");
             sw.WriteLine("username root");
-            sw.WriteLine("password ");
+            sw.WriteLine("password xrxrxrxrxrxrxrxrxrxr");
             sw.Close();
         }
     }
