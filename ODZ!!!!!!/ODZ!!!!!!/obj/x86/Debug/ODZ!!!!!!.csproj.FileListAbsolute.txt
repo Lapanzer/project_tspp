@@ -38,3 +38,5 @@ D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.exe
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.pdb
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.ResolveComReference.cache
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\Interop.Win32_TPMLib.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\Interop.Win32_TPMLib.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.csproj.ResolveComReference.cache

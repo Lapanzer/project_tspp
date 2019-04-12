@@ -76,7 +76,7 @@
             this.selectDataBut.Name = "selectDataBut";
             this.selectDataBut.Size = new System.Drawing.Size(164, 36);
             this.selectDataBut.TabIndex = 2;
-            this.selectDataBut.Text = "Обробка даних";
+            this.selectDataBut.Text = "Пошук даних";
             this.selectDataBut.UseVisualStyleBackColor = true;
             this.selectDataBut.Click += new System.EventHandler(this.SelectDataBut_Click);
             // 

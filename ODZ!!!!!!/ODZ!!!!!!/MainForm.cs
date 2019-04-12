@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-
 namespace ODZ______
 {
     /// <summary>
@@ -12,6 +11,7 @@ namespace ODZ______
         public MainForm()
         {
             InitializeComponent();
+            
         }
 
         private void ChangeDataBut_Click(object sender, EventArgs e)

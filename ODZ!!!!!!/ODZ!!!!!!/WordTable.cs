@@ -18,7 +18,7 @@ namespace ODZ______
         public WordTable()
         {
             app = new Application();
-            app.ShowAnimation = false;
+            //app.ShowAnimation = false;
             app.Visible = false;
             document = app.Documents.Add(ref missing,
                                 ref missing, ref missing, ref missing);

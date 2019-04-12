@@ -1,7 +1,6 @@
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.exe
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.pdb
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\MySql.Data.dll
-D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\MySql.Data.xml
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.MainForm.resources
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.RedactionForm.resources
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ______.Properties.Resources.resources
@@ -27,3 +26,5 @@ D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csp
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.CopyComplete
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.exe
 D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\Interop.Win32_TPMLib.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.ResolveComReference.cache
