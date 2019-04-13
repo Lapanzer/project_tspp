@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace ODZ______
 {
     /// <summary>
-    /// Start form with greeting
+    /// Форма привітання.
     /// </summary>
     public partial class MainForm : Form
     {
@@ -13,6 +13,9 @@ namespace ODZ______
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Обробник натиснення клавіші "Керування даними".
+        /// </summary>
         private void ChangeDataBut_Click(object sender, EventArgs e)
         {
             RedactionForm f2 = new RedactionForm(this);
@@ -20,6 +23,9 @@ namespace ODZ______
             Hide();
         }
 
+        /// <summary>
+        /// Обробник натиснення клавіші "Пошук даних".
+        /// </summary>
         private void SelectDataBut_Click(object sender, EventArgs e)
         {
             SearchForm f3 = new SearchForm(this);

@@ -1,7 +1,7 @@
 ﻿namespace ODZ______
 {
     /// <summary>
-    /// Class with result data row
+    /// Клас-контейнер результату пошуку.
     /// </summary>
     class AbitResult
     {

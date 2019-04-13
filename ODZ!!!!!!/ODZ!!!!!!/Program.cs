@@ -6,7 +6,7 @@ namespace ODZ______
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Точка входу додатку.
         /// </summary>
         [STAThread]
         static void Main()

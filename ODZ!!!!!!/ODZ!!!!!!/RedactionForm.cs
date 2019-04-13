@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 namespace ODZ______
 {
     /// <summary>
-    /// Form that provide modification data
+    /// Форма для керування даними абітурієнтів.
     /// </summary>
     public partial class RedactionForm : Form
     {
@@ -22,7 +22,7 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Method of conection to MySQL Server
+        /// Метод для з'єднання з БД.
         /// </summary>
         private void DBConnect()
         {
@@ -30,7 +30,7 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Methot to read all data from table abits
+        /// Метод для зчитування строк з БД.
         /// </summary>
         private void SelectAllData()
         {
@@ -53,10 +53,9 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Method to adding new abitudient
+        /// Обробник клавіші "Додати".
+        /// Перевіряє правильність введених даних та додає строку в БД в разі успіху.
         /// </summary>
-        /// <param name="sender">Sender</param>
-        /// <param name="e">Event arguments</param>
         private void AddBut_Click(object sender, System.EventArgs e)
         {
             string surname = addSurnameTxt.Text;

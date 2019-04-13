@@ -4,6 +4,9 @@ using System.IO;
 
 namespace ODZ______
 {
+    /// <summary>
+    /// Класс для роботи з базою даних в програмі.
+    /// </summary>
     class DBUtils
     {
         private static string host;
@@ -12,9 +15,9 @@ namespace ODZ______
         private static string password;
 
         /// <summary>
-        /// Method of setting conection parameters
+        /// Метод для створення з'єднання з сервером MySQL на основі заданих параметрів.
         /// </summary>
-        /// <returns>MySQLConection</returns>
+        /// <returns>Повертає об'єкт для роботи зі з'єднанням.</returns>
         public static MySqlConnection GetDBConnection()
         {
             ReadConfigFile();
@@ -22,6 +25,10 @@ namespace ODZ______
 
             return DBMySQLUtils.GetDBConnection(host, port, database, username, password);
         }
+
+        /// <summary>
+        /// Метод для зчитування параметрів з'єднання з файлу конфігурації.
+        /// </summary>
         public static void ReadConfigFile()
         {
             StreamReader sr;
@@ -69,13 +76,17 @@ namespace ODZ______
             }
             sr.Close();
         }
+
+        /// <summary>
+        /// Метод для створення файлу конфігурації зі стандартними параметрами.
+        /// </summary>
         public static void CreateConfigFile()
         {
             StreamWriter sw = new StreamWriter("configs.txt");
             sw.WriteLine("host 127.0.0.1");
             sw.WriteLine("port 3306");
             sw.WriteLine("username root");
-            sw.WriteLine("password xrxrxrxrxrxrxrxrxrxr");
+            sw.WriteLine("password ");
             sw.Close();
         }
     }

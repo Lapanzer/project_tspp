@@ -5,19 +5,19 @@ using MySql.Data.MySqlClient;
 namespace ODZ______
 {
     /// <summary>
-    /// Class with utils to work with MySQL
+    /// Клас для з'єднання з БД MySQL та виконання запитів.
     /// </summary>
     class DBMySQLUtils
     {
         /// <summary>
-        /// Method to set connection with MySQL server
+        /// Метод для встановлення з'єднання з MySQL-сервером.
         /// </summary>
-        /// <param name="host">Name or IP-adress of host</param>
-        /// <param name="port">Using port</param>
-        /// <param name="database">Using schema</param>
-        /// <param name="username">User's login</param>
-        /// <param name="password">User's password</param>
-        /// <returns>Setted connection</returns>
+        /// <param name="host">Ім'я або адреса хоста MySQL-серверу.</param>
+        /// <param name="port">Порт, що прослуховує сервер БД.</param>
+        /// <param name="database">Використана схема.</param>
+        /// <param name="username">Логін користувача БД.</param>
+        /// <param name="password">Пароль користувача БД.</param>
+        /// <returns>Повертає об'єкт для роботи з MySQL.</returns>
         public static MySqlConnection GetDBConnection(string host, int port, 
                                                       string database, 
                                                       string username, 
@@ -31,7 +31,7 @@ namespace ODZ______
             {
                 conn.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 conn.Close();
             }
@@ -39,11 +39,11 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Method to execute DB query
+        /// Метод для виконання запитів
         /// </summary>
-        /// <param name="query">Query of DB</param>
-        /// <param name="conn">MySQLConection</param>
-        /// <returns>MySqlDataReader</returns>
+        /// <param name="query">Строка запиту до БД.</param>
+        /// <param name="conn">Створене з'єднання</param>
+        /// <returns>Об'єкт для читання відповіді серверу на запит.</returns>
         public static MySqlDataReader ExecQuery(string query, MySqlConnection conn)
         {
             MySqlCommand command = new MySqlCommand(query, conn);
