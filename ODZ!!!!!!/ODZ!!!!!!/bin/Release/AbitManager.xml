@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbitManager</name>
+    </assembly>
+    <members>
+        <member name="T:ODZ______.AbitResult">
+            <summary>
+            Клас-контейнер результату пошуку.
+            </summary>
+        </member>
+        <member name="T:ODZ______.DBUtils">
+            <summary>
+            Класс для роботи з базою даних в програмі.
+            </summary>
+        </member>
+        <member name="M:ODZ______.DBUtils.GetDBConnection">
+            <summary>
+            Метод для створення з'єднання з сервером MySQL на основі заданих параметрів.
+            </summary>
+            <returns>Повертає об'єкт для роботи зі з'єднанням.</returns>
+        </member>
+        <member name="M:ODZ______.DBUtils.CheckTable(MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Перевірка існування таблиці з абітурієнтами.
+            Якщо відсутня, то створює.
+            </summary>
+            <param name="conn">Створене з'єднання</param>
+        </member>
+        <member name="M:ODZ______.DBUtils.GetDBConnection(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Метод для встановлення з'єднання з MySQL-сервером.
+            </summary>
+            <param name="host">Ім'я або адреса хоста MySQL-серверу.</param>
+            <param name="port">Порт, що прослуховує сервер.</param>
+            <param name="database">Використана схема.</param>
+            <param name="username">Логін користувача БД.</param>
+            <param name="password">Пароль користувача БД.</param>
+            <returns>Повертає об'єкт для роботи з MySQL.</returns>
+        </member>
+        <member name="M:ODZ______.DBUtils.ExecQuery(System.String,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Метод для виконання запитів
+            </summary>
+            <param name="query">Строка запиту до БД.</param>
+            <param name="conn">Створене з'єднання</param>
+            <returns>Об'єкт для читання відповіді серверу на запит.</returns>
+        </member>
+        <member name="M:ODZ______.DBUtils.ReadConfigFile">
+            <summary>
+            Метод для зчитування параметрів з'єднання з файлу конфігурації.
+            </summary>
+        </member>
+        <member name="M:ODZ______.DBUtils.CreateConfigFile">
+            <summary>
+            Метод для створення файлу конфігурації зі стандартними параметрами.
+            </summary>
+        </member>
+        <member name="T:ODZ______.MainForm">
+            <summary>
+            Форма привітання.
+            </summary>
+        </member>
+        <member name="M:ODZ______.MainForm.#ctor">
+            <summary>
+            Конструктор форми.
+            </summary>
+        </member>
+        <member name="M:ODZ______.MainForm.ChangeDataBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник натиснення клавіші "Керування даними".
+            </summary>
+        </member>
+        <member name="M:ODZ______.MainForm.SelectDataBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник натиснення клавіші "Пошук даних".
+            </summary>
+        </member>
+        <member name="F:ODZ______.MainForm.components">
+            <summary>
+            Требуется переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:ODZ______.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:ODZ______.MainForm.InitializeComponent">
+            <summary>
+            Обязательный метод для поддержки конструктора - не изменяйте
+            содержимое данного метода при помощи редактора кода.
+            </summary>
+        </member>
+        <member name="T:ODZ______.RedactionForm">
+            <summary>
+            Форма для керування даними абітурієнтів.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.#ctor(ODZ______.MainForm)">
+            <summary>
+            Конструктор формы.
+            </summary>
+            <param name="r">Ссылка на родительскую форму.</param>
+        </member>
+        <member name="M:ODZ______.RedactionForm.DBConnect">
+            <summary>
+            Метод для з'єднання з БД.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.SelectAllData">
+            <summary>
+            Метод для зчитування строк з БД.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.AddBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник клавіші "Додати".
+            Перевіряє правильність введених даних та додає строку в БД у разі успіху.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.ChBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник клавіші "Змінити".
+            Перевіряє правильність введених даних та змінює обрану строку в БД у разі успіху.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.InsertRow(ODZ______.SampleAbit)">
+            <summary>
+            Метод для вставки строки в БД.
+            </summary>
+            <param name="sa">Дані для вставки.</param>
+        </member>
+        <member name="M:ODZ______.RedactionForm.UpdateRow(ODZ______.SampleAbit)">
+            <summary>
+            Метод для редагування строки в БД.
+            </summary>
+            <param name="sa">Дані для редагування.</param>
+        </member>
+        <member name="M:ODZ______.RedactionForm.RedactionForm_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Обробник події зачинення форми.
+            Закриває з'єднання з БД та показує батьківську форму.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.DGV1_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Обробник події вибору рядку в таблиці форми.
+            </summary>
+        </member>
+        <member name="F:ODZ______.RedactionForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ODZ______.RedactionForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ODZ______.RedactionForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ODZ______.Program.Main">
+            <summary>
+            Точка входу додатку.
+            </summary>
+        </member>
+        <member name="T:ODZ______.SampleAbit">
+            <summary>
+            Клас даних про абітурієнта.
+            </summary>
+        </member>
+        <member name="T:ODZ______.SearchForm">
+            <summary>
+            Форма пошуку даних.
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.#ctor(ODZ______.MainForm)">
+            <summary>
+            Конструктор форми.
+            </summary>
+            <param name="r">Батьківська форма.</param>
+        </member>
+        <member name="M:ODZ______.SearchForm.DBConnect">
+            <summary>
+            Метод для з'єднання з БД.
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.SelectXData(System.Single)">
+            <summary>
+            Обробник натиснення клавіші "Пошук" по параметру оцінки.
+            </summary>
+            <param name="mark">Оцінка за іспити.</param>
+        </member>
+        <member name="M:ODZ______.SearchForm.SelectXYData(System.Single,System.String)">
+            <summary>
+            Обробник натиснення клавіші "Пошук" по параметру оцінки та номеру школи.
+            </summary>
+            <param name="mark">Оцінка за іспити.</param>
+            <param name="schoolNum">Номер школи.</param>
+        </member>
+        <member name="M:ODZ______.SearchForm.SearchXBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник клавіші "Пошук" (що ліворуч).
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.SearchXYBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник клавіші "Пошук" (що праворуч).
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.SaveDataBut_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обробник клавіші "Зберегти дані"
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.SearchForm_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Обробник події зачинення форми.
+            Закриває з'єднання з БД та показує батьківську форму.
+            </summary>
+        </member>
+        <member name="F:ODZ______.SearchForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ODZ______.SearchForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ODZ______.SearchForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ODZ______.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:ODZ______.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:ODZ______.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+    </members>
+</doc>

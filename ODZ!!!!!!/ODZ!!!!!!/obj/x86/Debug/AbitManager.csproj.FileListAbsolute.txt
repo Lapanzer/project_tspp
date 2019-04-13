@@ -1,0 +1,15 @@
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.exe.config
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\ODZ!!!!!!.pdb
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Debug\MySql.Data.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\Interop.Win32_TPMLib.dll
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\AbitManager.csproj.ResolveComReference.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.MainForm.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.RedactionForm.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.Properties.Resources.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ______.SearchForm.resources
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\AbitManager.csproj.GenerateResource.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\AbitManager.csproj.CoreCompileInputs.cache
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\AbitManager.csproj.CopyComplete
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.exe
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Debug\ODZ!!!!!!.pdb

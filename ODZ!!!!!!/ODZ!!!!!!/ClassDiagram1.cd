@@ -10,14 +10,14 @@
   <Class Name="ODZ______.DBMySQLUtils">
     <Position X="5.25" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>DBMySQLUtils.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ODZ______.DBUtils">
     <Position X="2.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAACAAABAAAAAAAAEAAAAAAAgAAAgAAgAAAAA=</HashCode>
       <FileName>DBUtils.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -85,16 +85,16 @@
       <Field Name="markDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="nameDataGridViewTextBoxColumn" Hidden="true" />
       <Field Name="numberOfSchoolDataGridViewTextBoxColumn" Hidden="true" />
-      <Field Name="sampleAbitBindingSource" Hidden="true" />
+      <Field Name="sampleAbitBS" Hidden="true" />
       <Field Name="surnameDataGridViewTextBoxColumn" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>DECgAAACASAACBAAQASgAAADgAQIAgAAACFQAIoAIAQ=</HashCode>
+      <HashCode>DECgAAACASAACBAAYASgAAADgAQIAgAAACFQgIoAIAQ=</HashCode>
       <FileName>RedactionForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ODZ______.SearchForm">
-    <Position X="2.75" Y="2.5" Width="2" />
+    <Position X="2.75" Y="3.25" Width="2" />
     <Members>
       <Field Name="abitResultX" Hidden="true" />
       <Field Name="abitResultXY" Hidden="true" />
@@ -122,18 +122,20 @@
       <Field Name="surnameDataGridViewTextBoxColumn1" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>BAAACAAAACAgABAAAICwAQATCAQIhAAAASAAACgAIAA=</HashCode>
+      <HashCode>BAAACAAAACAgABAgAICwAQATCQQIhAAAASAAACgAIAA=</HashCode>
       <FileName>SearchForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Windows.Forms.Form" Collapsed="true">
     <Position X="5.5" Y="4.5" Width="1.5" />
-    <NestedTypes>
-      <Class Name="System.Windows.Forms.Form.ControlCollection" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-    </NestedTypes>
     <TypeIdentifier />
+  </Class>
+  <Class Name="ODZ______.WordTable">
+    <Position X="5.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIgAAAAAAAAAAAAAAAAAAAIAACAAACAAAECACAA=</HashCode>
+      <FileName>WordTable.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

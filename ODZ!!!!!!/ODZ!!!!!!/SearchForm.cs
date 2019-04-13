@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Microsoft.Win32;
-
-using Word =  Microsoft.Office.Interop.Word;
 using System.Text.RegularExpressions;
 
 namespace ODZ______
 {
+    /// <summary>
+    /// Форма пошуку даних.
+    /// </summary>
     public partial class SearchForm : Form
     {
         private MainForm root;
         private MySqlConnection conn;
 
+        /// <summary>
+        /// Конструктор форми.
+        /// </summary>
+        /// <param name="r">Батьківська форма.</param>
         public SearchForm(MainForm r)
         {
             InitializeComponent();
@@ -23,11 +27,18 @@ namespace ODZ______
             DBConnect();
         }
 
+        /// <summary>
+        /// Метод для з'єднання з БД.
+        /// </summary>
         private void DBConnect()
         {
             conn = DBUtils.GetDBConnection();
         }
 
+        /// <summary>
+        /// Обробник натиснення клавіші "Пошук" по параметру оцінки.
+        /// </summary>
+        /// <param name="mark">Оцінка за іспити.</param>
         private void SelectXData(float mark)
         {
             abitResultX.Clear();
@@ -36,9 +47,9 @@ namespace ODZ______
                 MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
-            DBMySQLUtils.CheckTable(conn);
+            DBUtils.CheckTable(conn);
 
-            MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
+            MySqlDataReader reader = DBUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                                                            + mark.ToString().Replace(',', '.') + ";", conn);
             while (reader.Read())
             {
@@ -49,17 +60,22 @@ namespace ODZ______
             reader.Close();
         }
 
+        /// <summary>
+        /// Обробник натиснення клавіші "Пошук" по параметру оцінки та номеру школи.
+        /// </summary>
+        /// <param name="mark">Оцінка за іспити.</param>
+        /// <param name="schoolNum">Номер школи.</param>
         private void SelectXYData(float mark, string schoolNum)
         {
             abitResultXY.Clear();
             if (!conn.Ping())
             {
-                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL.\n Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
-            DBMySQLUtils.CheckTable(conn);
+            DBUtils.CheckTable(conn);
 
-            MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
+            MySqlDataReader reader = DBUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                            + mark.ToString().Replace(',','.') + " and schoolNumber='" + schoolNum +"';", conn);
             while (reader.Read())
             {
@@ -70,6 +86,9 @@ namespace ODZ______
             reader.Close();
         }
 
+        /// <summary>
+        /// Обробник клавіші "Пошук" (що ліворуч).
+        /// </summary>
         private void SearchXBut_Click(object sender, EventArgs e)
         {
             float minMark;
@@ -88,6 +107,9 @@ namespace ODZ______
             SelectXData(minMark);
         }
 
+        /// <summary>
+        /// Обробник клавіші "Пошук" (що праворуч).
+        /// </summary>
         private void SearchXYBut_Click(object sender, EventArgs e)
         {
             float minMark;
@@ -113,7 +135,7 @@ namespace ODZ______
                 schoolNumXYTxt.SelectAll();
                 return;
             }
-            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -№]+$").Success)
             {
                 MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
                 schoolNumXYTxt.Focus();
@@ -123,6 +145,9 @@ namespace ODZ______
             SelectXYData(minMark, schoolNum);
         }
 
+        /// <summary>
+        /// Обробник клавіші "Зберегти дані"
+        /// </summary>
         private void SaveDataBut_Click(object sender, EventArgs e)
         {
             if (abitResultXY.Count > 0 || abitResultX.Count > 0)
@@ -157,19 +182,13 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Show main form before closing
+        /// Обробник події зачинення форми.
+        /// Закриває з'єднання з БД та показує батьківську форму.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void SearchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             root.Show();
             conn.Close();
-        }
-
-        private void SearchForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

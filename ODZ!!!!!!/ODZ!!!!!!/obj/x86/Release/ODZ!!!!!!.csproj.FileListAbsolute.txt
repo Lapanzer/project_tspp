@@ -29,3 +29,4 @@ D:\Project\GitHub\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.pdb
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\Interop.Win32_TPMLib.dll
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\obj\x86\Release\ODZ!!!!!!.csproj.ResolveComReference.cache
 D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.exe.config
+D:\GIT\project_tspp\ODZ!!!!!!\ODZ!!!!!!\bin\Release\ODZ!!!!!!.xml

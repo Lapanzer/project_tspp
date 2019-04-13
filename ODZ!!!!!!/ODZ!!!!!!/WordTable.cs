@@ -105,10 +105,12 @@ namespace ODZ______
 
         public void Save()
         {
-            F.SaveFileDialog dlg = new F.SaveFileDialog();
-            dlg.FileName = "Zvit"; // Default file name
-            dlg.DefaultExt = ".doc"; // Default file extension
-            dlg.Filter = "Text documents (.doc)|*.doc"; // Filter files by extension
+            F.SaveFileDialog dlg = new F.SaveFileDialog
+            {
+                FileName = "Zvit", // Default file name
+                DefaultExt = ".doc", // Default file extension
+                Filter = "Text documents (.doc)|*.doc" // Filter files by extension
+            };
             dlg.ShowDialog();
             if (dlg.FileName != "Zvit")
             {

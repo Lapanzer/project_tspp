@@ -1,5 +1,8 @@
 ﻿namespace ODZ______
 {
+    /// <summary>
+    /// Клас даних про абітурієнта.
+    /// </summary>
     class SampleAbit : AbitResult
     {
         public int Id { get; set; }

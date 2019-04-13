@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("ODZ!!!!!!")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("AbitManager")]
+[assembly: AssemblyDescription("Додаток для роботи з абітурієнтами")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ODZ!!!!!!")]

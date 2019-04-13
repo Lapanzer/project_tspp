@@ -8,6 +8,9 @@ namespace ODZ______
     /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Конструктор форми.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();

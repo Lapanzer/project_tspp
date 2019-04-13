@@ -151,7 +151,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Оцінки";
+            this.label3.Text = "Оцінка";
             // 
             // label2
             // 
@@ -270,17 +270,16 @@
             this.markDataGridViewTextBoxColumn,
             this.numberOfSchoolDataGridViewTextBoxColumn});
             this.dGV1.DataSource = this.sampleAbitBS;
-            this.dGV1.Location = new System.Drawing.Point(13, 21);
+            this.dGV1.Location = new System.Drawing.Point(9, 21);
             this.dGV1.MultiSelect = false;
             this.dGV1.Name = "dGV1";
             this.dGV1.ReadOnly = true;
             this.dGV1.RowHeadersVisible = false;
             this.dGV1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV1.Size = new System.Drawing.Size(507, 150);
+            this.dGV1.Size = new System.Drawing.Size(513, 150);
             this.dGV1.TabIndex = 0;
-            this.dGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV1_CellContentClick);
-            this.dGV1.SelectionChanged += new System.EventHandler(this.dGV1_SelectionChanged);
+            this.dGV1.SelectionChanged += new System.EventHandler(this.DGV1_SelectionChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -381,7 +380,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 16);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Оцінки";
+            this.label8.Text = "Оцінка";
             // 
             // RedactionForm
             // 

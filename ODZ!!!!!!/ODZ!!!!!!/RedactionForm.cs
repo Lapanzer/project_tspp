@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace ODZ______
 {
@@ -12,6 +13,10 @@ namespace ODZ______
         private MainForm root;
         private MySqlConnection conn;
 
+        /// <summary>
+        /// Конструктор формы.
+        /// </summary>
+        /// <param name="r">Ссылка на родительскую форму.</param>
         public RedactionForm(MainForm r)
         {
             InitializeComponent();
@@ -36,12 +41,12 @@ namespace ODZ______
         {
             if (!conn.Ping())
             {
-                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL.\n Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
-            DBMySQLUtils.CheckTable(conn);
+            DBUtils.CheckTable(conn);
             sampleAbitBS.Clear();
-            MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT * FROM abits;", conn);
+            MySqlDataReader reader = DBUtils.ExecQuery("SELECT * FROM abits;", conn);
             while (reader.Read())
             {
                 sampleAbitBS.Add(new SampleAbit(int.Parse(reader["id"].ToString()),
@@ -55,9 +60,9 @@ namespace ODZ______
 
         /// <summary>
         /// Обробник клавіші "Додати".
-        /// Перевіряє правильність введених даних та додає строку в БД в разі успіху.
+        /// Перевіряє правильність введених даних та додає строку в БД у разі успіху.
         /// </summary>
-        private void AddBut_Click(object sender, System.EventArgs e)
+        private void AddBut_Click(object sender, EventArgs e)
         {
             string surname = addSurnameTxt.Text;
             string name = addNameTxt.Text;
@@ -93,7 +98,7 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
-            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -№]+$").Success)
             {
                 MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
                 addSchoolNumTxt.Focus();
@@ -112,11 +117,10 @@ namespace ODZ______
         }
 
         /// <summary>
-        /// Method to change the abiturient
+        /// Обробник клавіші "Змінити".
+        /// Перевіряє правильність введених даних та змінює обрану строку в БД у разі успіху.
         /// </summary>
-        /// <param name="sender">Sender</param>
-        /// <param name="e">Event arguments</param>
-        private void ChBut_Click(object sender, System.EventArgs e)
+        private void ChBut_Click(object sender, EventArgs e)
         {
             string surname = chSurnameTxt.Text;
             string name = chNameTxt.Text;
@@ -152,7 +156,7 @@ namespace ODZ______
             }
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
-            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -№]+$").Success)
             {
                 MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
                 chSchoolNumTxt.Focus();
@@ -165,38 +169,53 @@ namespace ODZ______
             SelectAllData();
         }
         
+        /// <summary>
+        /// Метод для вставки строки в БД.
+        /// </summary>
+        /// <param name="sa">Дані для вставки.</param>
         private void InsertRow(SampleAbit sa)
         {
             if (!conn.Ping())
                 return;
-            DBMySQLUtils.CheckTable(conn);
-            string query = "insert into abits(surname, name, mark, schoolNumber) values('" +
-                sa.Surname + "', '" + sa.Name + "', '" 
+            DBUtils.CheckTable(conn);
+            string query = "insert into abits(surname, name, mark, schoolNumber) values('" 
+                + sa.Surname + "', '" + sa.Name + "', '" 
                 + sa.Mark.ToString().Replace(',','.') + "', '" 
                 + sa.NumberOfSchool + "');";
-            DBMySQLUtils.ExecQuery(query, conn).Close();
+            DBUtils.ExecQuery(query, conn).Close();
         }
 
+        /// <summary>
+        /// Метод для редагування строки в БД.
+        /// </summary>
+        /// <param name="sa">Дані для редагування.</param>
         private void UpdateRow(SampleAbit sa)
         {
             if (!conn.Ping())
                 return;
-            DBMySQLUtils.CheckTable(conn);
-            string query = "update abits set surname = '" +
-                sa.Surname + "', name = '" + sa.Name 
+            DBUtils.CheckTable(conn);
+            string query = "update abits set surname = '" 
+                + sa.Surname + "', name = '" + sa.Name 
                 + "', mark = '" + sa.Mark.ToString().Replace(',', '.') 
                 + "', schoolNumber = '" + sa.NumberOfSchool 
                 + "' where id = " + cB1.SelectedValue.ToString() + ";";
-            DBMySQLUtils.ExecQuery(query, conn).Close();
+            DBUtils.ExecQuery(query, conn).Close();
         }
 
+        /// <summary>
+        /// Обробник події зачинення форми.
+        /// Закриває з'єднання з БД та показує батьківську форму.
+        /// </summary>
         private void RedactionForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             root.Show();
             conn.Close();
         }
         
-        private void dGV1_SelectionChanged(object sender, System.EventArgs e)
+        /// <summary>
+        /// Обробник події вибору рядку в таблиці форми.
+        /// </summary>
+        private void DGV1_SelectionChanged(object sender, EventArgs e)
         {
             if (dGV1.SelectedRows.Count < 1)
                 return;
@@ -204,11 +223,6 @@ namespace ODZ______
             chNameTxt.Text = dGV1.SelectedRows[0].Cells[2].Value.ToString();
             chMarkTxt.Text = dGV1.SelectedRows[0].Cells[3].Value.ToString().Replace('.', ',');
             chSchoolNumTxt.Text = dGV1.SelectedRows[0].Cells[4].Value.ToString();
-        }
-
-        private void dGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
