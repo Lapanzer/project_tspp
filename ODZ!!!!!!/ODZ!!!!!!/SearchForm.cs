@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using Microsoft.Win32;
 
 using Word =  Microsoft.Office.Interop.Word;
+using System.Text.RegularExpressions;
 
 namespace ODZ______
 {
@@ -35,6 +36,8 @@ namespace ODZ______
                 MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
+            DBMySQLUtils.CheckTable(conn);
+
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                                                            + mark.ToString().Replace(',', '.') + ";", conn);
             while (reader.Read())
@@ -54,6 +57,8 @@ namespace ODZ______
                 MessageBox.Show("Співчуваємо, але схоже, що ви не під\'єднані до серверу MySQL. Будь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return;
             }
+            DBMySQLUtils.CheckTable(conn);
+
             MySqlDataReader reader = DBMySQLUtils.ExecQuery("SELECT surname, name, mark FROM abits where mark>=" 
                            + mark.ToString().Replace(',','.') + " and schoolNumber='" + schoolNum +"';", conn);
             while (reader.Read())
@@ -101,53 +106,54 @@ namespace ODZ______
             string schoolNum = schoolNumXYTxt.Text;
             schoolNum = schoolNum.Replace("'", " ");
             schoolNum = schoolNum.Trim();
-
+            if (schoolNum == "")
+            {
+                MessageBox.Show("Вы не ввели номер школи. Спробуйте знову.", "Помилка");
+                schoolNumXYTxt.Focus();
+                schoolNumXYTxt.SelectAll();
+                return;
+            }
+            if (!Regex.Match(schoolNum, @"^[0-9А-Яа-яёЁЇїІіЄєҐґ -]+$").Success)
+            {
+                MessageBox.Show("Було введено некоректний номер школи! Спробуйте знову.", "Помилка");
+                schoolNumXYTxt.Focus();
+                schoolNumXYTxt.SelectAll();
+                return;
+            }
             SelectXYData(minMark, schoolNum);
         }
 
         private void SaveDataBut_Click(object sender, EventArgs e)
         {
-            
-                if (abitResultXY.Count > 0 || abitResultX.Count > 0)
+            if (abitResultXY.Count > 0 || abitResultX.Count > 0)
+            {
+                WordTable writeToWord = new WordTable();
+                writeToWord.AddHeader();
+                writeToWord.AddParagraphs("\n");
+                if ( abitResultXY.Count == 0 && abitResultX.Count > 0 )
                 {
-
-                    WordTable writeToWord = new WordTable();
-                    writeToWord.AddHeader();
-                    writeToWord.AddParagraphs("\n");
-                    if ( abitResultXY.Count == 0 && abitResultX.Count > 0 )
-                    {
-                        writeToWord.AddParagraphs("Список зарахованих.");
-                        writeToWord.AddTable(abitResultX);
-
-                    }
-                    else if ( abitResultXY.Count > 0 && abitResultX.Count == 0 )
-                    {
-
-                        writeToWord.AddParagraphs("Список зарахованих по школі.");
-                        writeToWord.AddTable(abitResultXY);
+                    writeToWord.AddParagraphs("Список зарахованих.");
+                    writeToWord.AddTable(abitResultX);
                 }
-                    else if (abitResultXY.Count > 0 && abitResultX.Count > 0)
-                    {
-
-                        writeToWord.AddParagraphs("Список зарахованих.");
-                        writeToWord.AddTable(abitResultX);
-                        writeToWord.AddParagraphs("\n\n");
-                        writeToWord.AddParagraphs("Список зарахованих по школі.");
-                        writeToWord.AddTable(abitResultXY);
-
+                else if ( abitResultXY.Count > 0 && abitResultX.Count == 0 )
+                {
+                    writeToWord.AddParagraphs("Список зарахованих по школі.");
+                    writeToWord.AddTable(abitResultXY);
                 }
-                    
-
-                    writeToWord.Save();
-                    writeToWord.Close();
-
+                else if (abitResultXY.Count > 0 && abitResultX.Count > 0)
+                {
+                    writeToWord.AddParagraphs("Список зарахованих.");
+                    writeToWord.AddTable(abitResultX);
+                    writeToWord.AddParagraphs("\n\n");
+                    writeToWord.AddParagraphs("Список зарахованих по школі.");
+                    writeToWord.AddTable(abitResultXY);
                 }
-                else
-                 {
-                    MessageBox.Show("Немає даних для запису!", "Помилка");
-                 }
-
-
+                  
+                writeToWord.Save();
+                writeToWord.Close();
+            }
+            else
+                MessageBox.Show("Немає даних для запису!", "Помилка");
         }
 
         /// <summary>
