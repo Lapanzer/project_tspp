@@ -91,10 +91,11 @@ namespace ODZ______
         /// </summary>
         private void SearchXBut_Click(object sender, EventArgs e)
         {
-            float minMark;
-            if (!float.TryParse(minMarkXTxt.Text, out minMark))
+            if (!float.TryParse(minMarkXTxt.Text, out float minMark))
             {
                 MessageBox.Show("Було введено некоректне число! Спробуйте знову.", "Помилка");
+                minMarkXTxt.Focus();
+                minMarkXTxt.SelectAll();
                 return;
             }
             if (minMark > 200 || minMark < 0)
@@ -112,10 +113,11 @@ namespace ODZ______
         /// </summary>
         private void SearchXYBut_Click(object sender, EventArgs e)
         {
-            float minMark;
-            if (!float.TryParse(minMarkXYTxt.Text, out minMark))
+            if (!float.TryParse(minMarkXYTxt.Text, out float minMark))
             {
                 MessageBox.Show("Було введено некоректне число! Спробуйте знову.", "Помилка");
+                minMarkXYTxt.Focus();
+                minMarkXYTxt.SelectAll();
                 return;
             }
             if (minMark > 200 || minMark < 0)

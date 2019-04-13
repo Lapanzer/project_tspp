@@ -150,8 +150,8 @@ namespace ODZ______
             if (mark > 200 || mark < 0)
             {
                 MessageBox.Show("Оцінка повинна бути в діапазоні 0-200! Спробуйте знову.", "Помилка");
-                addMarkTxt.Focus();
-                addMarkTxt.SelectAll();
+                chMarkTxt.Focus();
+                chMarkTxt.SelectAll();
                 return;
             }
             schoolNum = schoolNum.Replace("'", " ");

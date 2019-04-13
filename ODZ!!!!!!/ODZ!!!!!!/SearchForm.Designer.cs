@@ -141,7 +141,7 @@
             this.minMarkXTxt.MaxLength = 20;
             this.minMarkXTxt.Name = "minMarkXTxt";
             this.minMarkXTxt.Size = new System.Drawing.Size(62, 24);
-            this.minMarkXTxt.TabIndex = 0;
+            this.minMarkXTxt.TabIndex = 1;
             this.minMarkXTxt.TabStop = false;
             // 
             // label1
@@ -237,7 +237,7 @@
             this.schoolNumXYTxt.MaxLength = 20;
             this.schoolNumXYTxt.Name = "schoolNumXYTxt";
             this.schoolNumXYTxt.Size = new System.Drawing.Size(179, 24);
-            this.schoolNumXYTxt.TabIndex = 0;
+            this.schoolNumXYTxt.TabIndex = 1;
             this.schoolNumXYTxt.TabStop = false;
             // 
             // label3
@@ -256,7 +256,7 @@
             this.minMarkXYTxt.MaxLength = 20;
             this.minMarkXYTxt.Name = "minMarkXYTxt";
             this.minMarkXYTxt.Size = new System.Drawing.Size(60, 24);
-            this.minMarkXYTxt.TabIndex = 0;
+            this.minMarkXYTxt.TabIndex = 1;
             this.minMarkXYTxt.TabStop = false;
             // 
             // label2
