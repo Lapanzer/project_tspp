@@ -2,4 +2,4 @@ host 127.0.0.1
 port 3306
 username root
 password xrxrxrxrxrxrxrxrxrxr
-table db_odz
+table db_odz1
