@@ -10,7 +10,10 @@ namespace ODZ______
         private Application app;
         private Document document;
         private object missing = System.Reflection.Missing.Value;
-      
+
+        /// <summary>
+        /// Конструктор для ініціалізації.
+        /// </summary>
         public WordTable()
         {
             app = new Application();
@@ -19,6 +22,10 @@ namespace ODZ______
             document = app.Documents.Add(ref missing,
                                 ref missing, ref missing, ref missing);
         }
+
+        /// <summary>
+        /// Додає заголовок файлу.
+        /// </summary>
 
         public void AddHeader()
         {
@@ -29,6 +36,9 @@ namespace ODZ______
             pText1.Format.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
             pText1.Range.InsertParagraphAfter();
         }
+        /// <summary>
+        /// Додає абзац 
+        /// </summary>
 
         public void AddParagraphs(String text)
         {
@@ -40,7 +50,9 @@ namespace ODZ______
             pText.Format.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
             pText.Range.InsertParagraphAfter();
         }
-
+        /// <summary>
+        /// Генерує заголовок таблиці.
+        /// </summary>
         private void AddStringToColmn(Cell cell, String text)
         {
             cell.Range.Text = text;
@@ -55,6 +67,9 @@ namespace ODZ______
             cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
         }
 
+        /// <summary>
+        /// Генерує таблицю з даними про абітурієнтів.
+        /// </summary>
         public void AddTable(abit.BindingSource result)
         {
             Paragraph para = document.Content.Paragraphs.Add(ref missing);
@@ -102,7 +117,9 @@ namespace ODZ______
                 }
             }
         }
-
+        /// <summary>
+        /// Зберігає Word файл до обраної папки.
+        /// </summary>
         public void Save()
         {
             F.SaveFileDialog dlg = new F.SaveFileDialog
@@ -118,7 +135,9 @@ namespace ODZ______
                 //F.MessageBox.Show(dlg.FileName, "Помилка");
             }
         }
-
+        /// <summary>
+        /// Закриває Word програму.
+        /// </summary>
         public void Close()
         { 
             document.Close(WdSaveOptions.wdDoNotSaveChanges);
