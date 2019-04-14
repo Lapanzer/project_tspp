@@ -82,9 +82,10 @@ namespace ODZ______
                 MySqlCommand command = new MySqlCommand(query, conn);
                 return command.ExecuteReader();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Схоже, з базою даних коїться неладне.\nБудь ласка, зверніться до системного адміністратора для виправлення неполадок.");
+                if(!ex.Message.Contains("doesn't exist"))
+                    MessageBox.Show("Схоже, з базою даних коїться неладне.\nБудь ласка, зверніться до системного адміністратора для виправлення неполадок.");
                 return null;
             }
         }
@@ -95,7 +96,7 @@ namespace ODZ______
         public static void ReadConfigFile()
         {
             StreamReader sr;
-            List<string> args = new List<string> {"host", "port", "username", "password", "table"};
+            List<string> args = new List<string> {"host", "port", "username", "password", "schema"};
             try { sr = new StreamReader("configs.txt"); }
             catch
             {
@@ -149,7 +150,7 @@ namespace ODZ______
             sw.WriteLine("port 3306");
             sw.WriteLine("username root");
             sw.WriteLine("password ");
-            sw.WriteLine("table db_odz");
+            sw.WriteLine("schema db_odz");
             sw.Close();
         }
     }
