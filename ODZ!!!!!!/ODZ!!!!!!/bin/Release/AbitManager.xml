@@ -243,6 +243,41 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="M:ODZ______.WordTable.#ctor">
+            <summary>
+            Конструктор для ініціалізації.
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.AddHeader">
+            <summary>
+            Додає заголовок файлу.
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.AddParagraphs(System.String)">
+            <summary>
+            Додає абзац 
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.AddStringToColmn(Microsoft.Office.Interop.Word.Cell,System.String)">
+            <summary>
+            Генерує заголовок таблиці.
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.AddTable(System.Windows.Forms.BindingSource)">
+            <summary>
+            Генерує таблицю з даними про абітурієнтів.
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.Save">
+            <summary>
+            Зберігає Word файл до обраної папки.
+            </summary>
+        </member>
+        <member name="M:ODZ______.WordTable.Close">
+            <summary>
+            Закриває Word програму.
+            </summary>
+        </member>
         <member name="T:ODZ______.Properties.Resources">
             <summary>
               Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
